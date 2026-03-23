@@ -38,9 +38,9 @@ ID,English Name,Chinese Name,Source Country,Retired
 37,Mun,Ä¾¶÷,Micronesia,FALSE
 38,Danas,µ¤ÄÈË¿,Philippines,FALSE
 39,Nari,°ÙºÏ,South Korea,FALSE
-40,Wipha,Î¤ÅÁ,Thailand,FALSE
+40,Wipha,Î¤ÅÁ,Thailand,TRUE
 41,Francisco,·¶Ë¹¸ß,United States,FALSE
-42,Co-may,Öñ½Ú²İ,Vietnam,FALSE
+42,Co-may,Öñ½Ú²İ,Vietnam,TRUE
 43,Krosa,ÂŞÉ¯,Cambodia,FALSE
 44,Bailu,°×Â¹,China,FALSE
 45,Podul,ÑîÁø,North Korea,FALSE
@@ -49,16 +49,16 @@ ID,English Name,Chinese Name,Source Country,Retired
 48,Nongfa,À¶ºş,Laos,FALSE
 49,Peipah,ÅıÅÃ,Macau,FALSE
 50,Tapah,Ëş°Í,Malaysia,FALSE
-51,Mitag,Ã×ÄÈ,Micronesia,FALSE
-52,Ragasa,èë¼ÓÉ³,Philippines,FALSE
+51,Mitag,Ã×ÄÈ,Micronesia,TRUE
+52,Ragasa,èë¼ÓÉ³,Philippines,TRUE
 53,Neoguri,ä½ĞÜ,South Korea,FALSE
-54,Bualoi,²©ÂŞÒÀ,Thailand,FALSE
-55,Matmo,ÂóµÂÄ·,United States,FALSE
+54,Bualoi,²©ÂŞÒÀ,Thailand,TRUE
+55,Matmo,ÂóµÂÄ·,United States,TRUE
 56,Halong,ÏÄÀË,Vietnam,FALSE
 57,Nakri,ÄÈ»ùÀò,Cambodia,FALSE
 58,Fengshen,·çÉñ,China,FALSE
-59,Kalmaegi,º£Å¸,North Korea,FALSE
-60,Fung-wong,·ï»Ë,Hong Kong,FALSE
+59,Kalmaegi,º£Å¸,North Korea,TRUE
+60,Fung-wong,·ï»Ë,Hong Kong,TRUE
 61,Koto,ÌìÇÙ,Japan,FALSE
 62,Nokaen,Âå°°,Laos,FALSE
 63,Penha,Î÷ÍûÑó,Macau,FALSE
