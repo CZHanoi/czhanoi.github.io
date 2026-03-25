@@ -1,6 +1,6 @@
 ---
 title: SCENIC+
-date: 2026-03-08
+date: 2026-03-25
 cover: scenic.jpg
 category:
   - code

@@ -26,7 +26,8 @@ cd gsMap
 pip install -e .
 ```
 
-
+## Tips
+①不要把`bcftools`和gsMap装在同一环境，会有底层库冲突；
 
 
 
