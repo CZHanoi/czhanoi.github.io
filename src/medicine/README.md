@@ -1,5 +1,6 @@
 ---
 cover: /assets/images/aksum.jpg
+Banner: /assets/images/aksum.jpg
 title: 医学之路 Medicine
 icon: fish-fins
 date: 2025-05-09
