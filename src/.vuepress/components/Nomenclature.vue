@@ -251,7 +251,7 @@ html:not(.dark) .nomenclature-page-wrapper::before{
 }
 
 /* ─── 其他 ─── */
-:global(.page-cover){display:none !important;}
+/* :global(.page-cover){display:none !important;} */
 
 .epic-quote{
   font-style:italic;font-size:1.4rem;line-height:1.5;

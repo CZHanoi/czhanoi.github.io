@@ -390,7 +390,7 @@ onUnmounted(()=>{
 
 <style scoped>
 .ashoka-layout{min-height:100vh;display:flex;flex-direction:column}
-:global(.page-cover){display:none !important;}
+/* :global(.page-cover){display:none !important;} */
 
 .ashoka-page{
   height:calc(100vh - var(--navbar-height));
