@@ -83,3 +83,13 @@ mamba install ipykernel -y
 python -m ipykernel install --user --name stalign --display-name "Py38 STalign"
 ```
 
+为了适配服务器`CUDA`版本，重新安装`pytorch`
+
+```bash
+pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 \
+  --index-url https://download.pytorch.org/whl/cu121
+```
+
+
+
+## ②代码模板
