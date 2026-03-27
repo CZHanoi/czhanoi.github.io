@@ -11,11 +11,6 @@ star: true
 article: true
 sticky: 99
 ---
-<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
-    "Time crumbles things; everything grows old and is forgotten under the power of time."
-    <br>
-    <span style="font-size: 0.9rem; color: #777;">— Aristotle</span>
-</blockquote>
 
 
 ## 2026-治安疏
@@ -56,13 +51,9 @@ sticky: 99
 
 ### 三二七-汉边改革
 
+[①一条鞭计划]()
 
-
-### 代号任务
-
-一条鞭
-
-治安疏
+[②治安疏计划]()
 
 
 

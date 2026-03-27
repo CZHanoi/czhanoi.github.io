@@ -15,7 +15,7 @@ article: true
 
 ## 更新后版本
 
-[三二七-汉边改革](/medicine/)
+[三二七-汉边改革](/medicine/#三二七-汉边改革)
 
 对`nodecw1`到`nodecw12`实行`jupyter runtime`和（主要是）`jupyter config`分离制度，实现`kernel`隔离。
 
