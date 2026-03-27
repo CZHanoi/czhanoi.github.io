@@ -90,6 +90,18 @@ pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 \
   --index-url https://download.pytorch.org/whl/cu121
 ```
 
+⚠️待解决报错信息
+
+```bash
+  WARNING: Failed to remove contents in a temporary directory '/cwStorage/home/chenzhh/miniforge3/envs/STalign/lib/python3.8/site-packages/~vfuser'.
+  You can safely remove it manually.
+  WARNING: Failed to remove contents in a temporary directory '/cwStorage/home/chenzhh/miniforge3/envs/STalign/lib/python3.8/site-packages/torch/~ib'.
+  You can safely remove it manually.
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+stalign 1.0 requires torch==2.0.0, but you have torch 2.4.1+cu121 which is incompatible.
+Successfully installed fsspec-2025.3.0 nvidia-cublas-cu12-12.1.3.1 nvidia-cuda-cupti-cu12-12.1.105 nvidia-cuda-nvrtc-cu12-12.1.105 nvidia-cuda-runtime-cu12-12.1.105 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.0.2.54 nvidia-curand-cu12-10.3.2.106 nvidia-cusolver-cu12-11.4.5.107 nvidia-cusparse-cu12-12.1.0.106 nvidia-nccl-cu12-2.20.5 nvidia-nvjitlink-cu12-12.9.86 nvidia-nvtx-cu12-12.1.105 torch-2.4.1+cu121 torchaudio-2.4.1+cu121 torchvision-0.19.1+cu121 triton-3.0.0
+```
+
 
 
 ## ②代码模板
