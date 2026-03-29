@@ -3,7 +3,7 @@ title: 未来规划
 icon: circle-info
 cover: /assets/images/Indonesia.jpg
 sticky: 20
-article: true
+article: False
 category:
   - Oracle
 ---

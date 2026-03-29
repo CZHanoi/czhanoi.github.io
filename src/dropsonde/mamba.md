@@ -28,9 +28,49 @@ mamba create -n Faxai -c conda-forge --override-channels python=3.11 scanpy pand
 mamba activate Faxai
 
 python -m ipykernel install --user --name faxai --display-name "Py311 Faxai"
+
+pip install glasbey
 ```
 
 - 单细胞数据的基础分析
+
+```bash
+mamba activate Faxai
+mamba install -c conda-forge -c bioconda --strict-channel-priority r-base=4.4 r-cli r-crayon r-hdf5r r-matrix r-r6 r-rlang r-seurat r-seuratobject r-stringi r-withr
+```
+
+```bash
+Rscript -e 'install.packages("remotes", repos="https://cloud.r-project.org")'
+R CMD INSTALL /home1/chenzhh/package/R/seurat-disk-master
+# Test
+Rscript -e 'library(SeuratDisk); cat("SeuratDisk version:", as.character(packageVersion("SeuratDisk")), "\n")'
+Rscript -e 'library(SeuratDisk); sessionInfo()'
+
+mamba install r-irkernel -y
+
+mamba install -y -c conda-forge -c bioconda --strict-channel-priority \
+  r-data.table \
+  r-dplyr \
+  r-ggplot2 \
+  r-patchwork \
+  r-ggalluvial \
+  r-stringr \
+  r-forcats \
+  r-tibble \
+  bioconductor-biomart \
+  bioconductor-zellkonverter \
+  bioconductor-singlecellexperiment
+```
+
+
+
+```R
+# install.packages("IRkernel", repos="https://cloud.r-project.org")
+IRkernel::installspec(user = TRUE, name = "faxai-r", displayname = "R453 Faxai")
+q()
+```
+
+
 
 ## Rebuild 重建
 

@@ -2,7 +2,7 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   // 首页以外的单页
-  { text: "守&望", icon: "fa6-solid:h", link: "/intro.html" },
+  // { text: "守&望", icon: "fa6-solid:h", link: "/intro.html" },
 
   // ────────── 医学之路 ──────────
   {
@@ -11,7 +11,7 @@ export default navbar([
     prefix: "/medicine/",
     children: [
       { text: "治安疏「2026」", link: "", icon: "fa6-solid:hurricane" },
-      { text: "养生主", link: "yangshengzhu/" },
+      { text: "养生主「open-ended」", link: "nourish/" },
     ],
   },
 

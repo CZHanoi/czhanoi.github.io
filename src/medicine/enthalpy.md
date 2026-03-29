@@ -1,8 +1,8 @@
 ---
 cover: enthalpy.jpg
 banner: enthalpy.jpg
-title: 汉边计划
-icon: fish-fins
+title: 汉边计划 (Enthalpy Change Plan)
+icon: fa6-solid:h
 date: 2026-03-27
 category:
   - Oracle
