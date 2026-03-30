@@ -1,7 +1,7 @@
 ---
 cover: nourish.jpg
 banner: nourish.jpg
-title: 养生主 Nourish
+title: 养生主 → Nourishing the Lord of Life 
 icon: dna
 date: 2026-03-27
 category:
