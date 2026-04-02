@@ -11,7 +11,7 @@ export default navbar([
     prefix: "/medicine/",
     children: [
       { text: "治安疏「2026」", link: "", icon: "fa6-solid:hurricane" },
-      { text: "养生主「open-ended」", link: "nourish/" },
+      { text: "养生主「open-ended」", link: "nourish/" , icon: "fa6-solid:dna" },
     ],
   },
 
