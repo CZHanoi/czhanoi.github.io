@@ -6,7 +6,7 @@ export default navbar([
 
   // ────────── 医学之路 ──────────
   {
-    text: "医学之路",
+    text: "河岳",
     icon: "pen-to-square",
     prefix: "/medicine/",
     children: [
@@ -17,12 +17,12 @@ export default navbar([
 
   // ────────── 计算大计 ──────────
   {
-    text: "计算大计",
+    text: "云起",
     icon: "pen-to-square",
     prefix: "/computer/",
     children: [
-      { text: "MATLAB",      link: "matlab/" },
-      { text: "Python & R",  link: "python-r/" },
+      { text: "湿实验",      link: "", icon: "fa6-solid:code" },
+      // { text: "Python & R",  link: "python-r/" },
     ],
   },
 
@@ -32,7 +32,7 @@ export default navbar([
     icon: "monument",
     prefix: "/code/",
     children: [
-      { text: "序: Dentate gyrus", link: "", icon: "fa6-solid:head-side-brain" },
+      { text: "序: Dentate gyrus", link: "", icon: "fa6-solid:brain" },
       { text: "Convert",   link: "convert/", icon: "fa6-solid:arrow-right-arrow-left" },
 
     ],
@@ -69,8 +69,8 @@ export default navbar([
       { text: "序: Drop!!!!!", link: "", icon: "fa6-solid:hurricane" },
       { text: "Jupyter", link: "jupyter.html", icon: "fa6-solid:laptop-code" },
       { text: "Otaku-R", link: "otaku-r.html", icon: "fa6-solid:gamepad" },
-      { text: "Mamba ", link: "mamba.html", icon: "fa6-solid:snake" },
-      { text: "scp", link: "scp.html", icon: "fa6-solid:unicorn" },
+      { text: "Mamba ", link: "mamba.html", icon: "fa6-solid:m" },
+      { text: "scp", link: "scp.html", icon: "fa6-solid:truck-fast" },
 
 
     ],

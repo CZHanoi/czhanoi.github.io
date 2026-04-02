@@ -243,39 +243,21 @@ nohup jupyter lab --config="$HOME/.jupyter/jupyter_server_config.py" \
   > "$HOME/jupyter_log/log_jupyter_1224_$(hostname).log" 2>&1 &
 ```
 
-### jupyter基础信息查看命令
+
+
+
+
+#### ⑧`~/.condarc`
 
 ```bash
-jupyter --paths
-jupyter server --show-config
-jupyter kernelspec list
+# ~/.condarc
+channels:
+  - defaults
+  - conda-forge
+channel_priority: flexible
 ```
 
-### kernel管理
 
-#### python创建
-
-```bash
-mamba create -n py311 python=3.11 ipykernel -y
-mamba activate py311
-python -m ipykernel install --user --name py311 --display-name "Python (py311)"
-```
-
-#### R创建
-
-```bash
-mamba create -n r4 r-base -y
-mamba activate r4
-R
-```
-
-然后运行
-
-```R
-install.packages("IRkernel")# , repos="https://cloud.r-project.org")
-IRkernel::installspec(user = TRUE, name = "ir-r4", displayname = "R (r4)")
-q()
-```
 
 
 

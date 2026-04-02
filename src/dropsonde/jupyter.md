@@ -100,6 +100,82 @@ echo "Log file   : $LOG_DIR/log_jupyter_${PORT}_${NODE}.log"
 
 
 
+### jupyter基础信息查看命令
+
+```bash
+jupyter --paths
+jupyter server --show-config
+jupyter kernelspec list
+```
+
+### kernel管理
+
+#### python创建
+
+```bash
+mamba create -n py311 python=3.11 ipykernel -y
+mamba activate py311
+python -m ipykernel install --user --name py311 --display-name "Python (py311)"
+```
+
+#### R创建
+
+```bash
+mamba create -n r4 r-base -y
+mamba activate r4
+R
+```
+
+然后运行
+
+```R
+install.packages("IRkernel")# , repos="https://cloud.r-project.org")
+IRkernel::installspec(user = TRUE, name = "ir-r4", displayname = "R (r4)")
+q()
+```
+
+
+
+### 附：重新搭建Jupyter
+
+##### 安装&基础配置生成
+
+```
+mamba activate base
+mamba install jupyter -y
+jupyter server --generate-config
+# Writing default config to: '/cwStorage/home/chenzhh/.jupyter/jupyter_server_config.py'
+```
+
+##### 设置密码
+
+```bash
+jupyter server password
+# Enter password: 
+# Verify password:
+```
+
+##### 查看当前运行的jupyter
+
+```bash
+jupyter server list
+# Currently running servers:
+# http://localhost:1224/ :: /cwStorage/home/chenzh
+```
+
+##### 关掉
+
+```bash
+jupyter server stop 1224
+```
+
+##### 启动
+
+```bash
+nohup jupyter lab --config="$HOME/.jupyter/jupyter_server_config.py" \
+  > "$HOME/jupyter_log/log_jupyter_1224_$(hostname).log" 2>&1 &
+```
+
 
 
 

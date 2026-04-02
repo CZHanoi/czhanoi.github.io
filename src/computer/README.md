@@ -1,5 +1,5 @@
 ---
-title: 计算大计 Computer
+title: 湿实验
 cover: /assets/images/noru2.jpg
 icon: pen-to-square
 date: 2025-05-09
