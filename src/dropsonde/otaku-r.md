@@ -1,9 +1,9 @@
 ---
 title: Otaku-Hanoi's Mac Rstutio config 
 date: 2026-02-03
-cover: CRYCHIC.webp
+cover: otaku.jpg
 category:
-  - Oracle
+  - computer
 tag:
   - Manager
 star: true
