@@ -12,6 +12,7 @@ export default navbar([
     children: [
       { text: "治安疏「2026」", link: "", icon: "fa6-solid:hurricane" },
       { text: "养生主「open-ended」", link: "nourish/" , icon: "fa6-solid:dna" },
+      { text: "汉边「327」", link: "enthapy.md" , icon: "fa6-solid:h" },
     ],
   },
 
