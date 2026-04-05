@@ -9,7 +9,7 @@ export default defineUserConfig({
 
   lang: "en-US",
   title: "CZHanoi",
-  description: "What can I say?",
+  description: "To cherish ones who remember me",
 
   theme,
   // plugins: [

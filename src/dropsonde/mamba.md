@@ -66,6 +66,20 @@ q()
 
 
 
+### SIMO
+
+
+
+```
+mamba create -n simo python=3.8 -y
+mamba activate simo
+pip install simo-omics scanpy
+mamba install ipykernel
+python -m ipykernel install --user --name simo --display-name "Py38 SIMO"
+```
+
+
+
 ## Rebuild 重建
 
 现在如果迁移成功的话，我们账号通过最新的`10.190.xxx.xxx`登录节点之后，应该得到下面的结果：
