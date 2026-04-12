@@ -25,7 +25,8 @@ article: true
   <VPCard
     title="Janissary"
     desc="/ˈdʒænɪˌseri/ · n. 亲信，近卫；（奥斯曼帝国）土耳其禁卫军士兵"
-    background="var(--vp-c-bg-soft)"
+    background="rgba(12, 188, 30, 0.3)"
+    logo="/logoDark.png"
   />
 </div>
 
@@ -46,6 +47,7 @@ article: true
     title="Tanzimat"
     desc="/ˈtanzɪmat/ · n. 改革；（奥斯曼帝国 1839–1876 年的）整顿、重组改革"
     background="var(--vp-c-bg-soft)"
+    logo="/logo.png"
   />
 </div>
 
