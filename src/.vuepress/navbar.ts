@@ -19,32 +19,32 @@ export default navbar([
   // ────────── 计算大计 ──────────
   {
     text: "云起",
-    icon: "pen-to-square",
+    icon: "cloud",
     prefix: "/computer/",
     children: [
-      { text: "湿实验",      link: "", icon: "fa6-solid:code" },
+      { text: "序：Dentate gyrus", link: "", icon: "fa6-solid:brain" },
+      { text: "湿：湿实验",      link: "wet.md", icon: "fa6-solid:code" },
+      { text: "暂：Convert",   link: "convert/", icon: "fa6-solid:arrow-right-arrow-left" },
       // { text: "Python & R",  link: "python-r/" },
     ],
   },
 
   // ────────── 翰史 ──────────
-  {
-    text: "碑",
-    icon: "monument",
-    prefix: "/code/",
-    children: [
-      { text: "序: Dentate gyrus", link: "", icon: "fa6-solid:brain" },
-      { text: "Convert",   link: "convert/", icon: "fa6-solid:arrow-right-arrow-left" },
+  // {
+  //   text: "风碑",
+  //   icon: "monument",
+  //   prefix: "/monument/",
+  //   children: [
+  //     { text: "序：Dentate gyrus", link: "", icon: "fa6-solid:brain" },
+  //     { text: "暂：Convert",   link: "convert/", icon: "fa6-solid:arrow-right-arrow-left" },
 
-    ],
-  },
-  { text: 'Ashoka',
-    icon: 'fa6-solid:dharmachakra',
-    link: '/ashoka/' },
+  //   ],
+  // },
+
 
   // ────────── 命名表 ──────────
   {
-    text: "命名表",
+    text: "命表",
     icon: "fa6-solid:wind",
     link: "/nomenclature/",
   },
@@ -62,7 +62,7 @@ export default navbar([
     ],
   },
   {
-    text: "Dropsonde",
+    text: "神祇",
     link: "/dropsonde/",
     icon: "fa6-solid:torii-gate",
     prefix: "/dropsonde/",
@@ -76,4 +76,7 @@ export default navbar([
 
     ],
   },
+  { text: 'Ashoka',
+  icon: 'fa6-solid:dharmachakra',
+  link: '/ashoka/' },
 ]);
