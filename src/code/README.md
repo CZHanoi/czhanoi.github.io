@@ -1,7 +1,7 @@
 ---
 cover: /assets/images/ottoman.jpg
-title:  吉祥事变 （Auspicious Incident）
-icon: fish-fins
+title:  吉祥事变 Auspicious Incident
+icon: star-and-crescent
 index: false
 article: true
 ---
@@ -24,10 +24,11 @@ article: true
 <div class="vp-card-container">
   <VPCard
     title="Janissary"
-    desc="/ˈdʒænɪˌseri/ · n. 亲信，爪牙；（奥斯曼帝国）土耳其禁卫军士兵"
+    desc="/ˈdʒænɪˌseri/ · n. 亲信，近卫；（奥斯曼帝国）土耳其禁卫军士兵"
     background="var(--vp-c-bg-soft)"
   />
 </div>
+
 
 | 分区 | 简介 |
 | :--- | :--- |
@@ -40,15 +41,16 @@ article: true
 
 ##  坦齐马特 Tanzimat
 
-- [三二七汉边改革](/medicine/enthalpy.md)
-
 <div class="vp-card-container">
    <VPCard
     title="Tanzimat"
-    desc="/ˈtanzɪmat/ · n. 坦志麦特改革；（奥斯曼帝国 1839–1876 年的）整顿、重组改革"
+    desc="/ˈtanzɪmat/ · n. 改革；（奥斯曼帝国 1839–1876 年的）整顿、重组改革"
     background="var(--vp-c-bg-soft)"
   />
 </div>
+
+[三二七汉边改革](/medicine/enthalpy.md)
+
 
 |      |      |      |
 | ---- | ---- | ---- |
