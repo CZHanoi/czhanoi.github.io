@@ -5,8 +5,7 @@ icon: pen-to-square
 date: 2026-04-02
 category:
   - wet
-star: true
-sticky: 99
+star: false
 article: true
 ---
 
