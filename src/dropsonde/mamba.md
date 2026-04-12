@@ -20,7 +20,7 @@ article: true
 
 ### STalign
 
-见[STalign](/code/STalign.md)
+见[STalign](/computer/STalign.md)
 
 - ST配准
 
