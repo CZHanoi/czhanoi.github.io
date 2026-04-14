@@ -54,6 +54,8 @@ mamba install r-irkernel -y
 
 mamba install -y -c conda-forge -c bioconda --strict-channel-priority r-data.table r-dplyr  r-ggplot2 r-patchwork r-ggalluvial r-stringr r-forcats r-tibble \
   bioconductor-biomart bioconductor-zellkonverter bioconductor-singlecellexperiment
+  
+mamba install r-bpcells r-wgcna bioconductor-edger r-gprofiler -y
 ```
 
 
