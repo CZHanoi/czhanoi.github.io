@@ -16,11 +16,9 @@ sticky: 99
 ## 2026-治安疏
 
 <blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
-    "For unto us a child is born, unto us a son is given:<br>
-    and the government shall be upon his shoulder:<br>
-    and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace."
+    "Silver cities rise"
     <br>
-    <span style="font-size: 0.9rem; color: #777;">— Isaiah 9:6 (King James Version)</span>
+    <span style="font-size: 0.9rem; color: #777;">— Carly Simon, <em>Let the River Run</em> (from the 1988 film <em>Working Girl</em>)</span>
 </blockquote>
 
 ### 总方略
