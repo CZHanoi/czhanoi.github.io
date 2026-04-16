@@ -15,8 +15,24 @@ article: true
     <br>
     <span style="font-size: 0.9rem; color: #777;">— Aristotle</span>
 </blockquote>
-
 ## mamba环境管理
+
+### Goni
+
+#### Goni-metal
+
+- 运行[`METAL`](https://github.com/statgen/METAL)
+
+```bash
+mamba create -y -n goni-metal -c conda-forge python=3.11 pandas numpy matplotlib matplotlib-venn cmake make cxx-compiler git bedtools pigz wget curl
+#git clone https://github.com/statgen/METAL.git
+#上传至服务器"$HOME/software/METAL"
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+ make -j"$(nproc)"
+```
+
+
 
 ### STalign
 

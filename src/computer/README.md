@@ -4,6 +4,7 @@ title:  吉祥事变 Auspicious Incident
 icon: star-and-crescent
 index: false
 article: true
+sticky: 99
 ---
 
 <blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
