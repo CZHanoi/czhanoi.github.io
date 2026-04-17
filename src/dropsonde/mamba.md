@@ -47,6 +47,8 @@ python -m ipykernel install --user --name goni-metal --display-name "Py311 Goni-
 
 - ST配准
 
+  
+
 ### Faxai
 
 ```bash
@@ -102,6 +104,14 @@ python -m ipykernel install --user --name simo --display-name "Py38 SIMO"
 ```
 
 
+
+### Mujigae
+
+见[Secnicplus](/computer/code/scenicplus#installation)
+
+- 主要用于[SCENIC+](https://scenicplus.readthedocs.io/en/latest/)分析
+
+  
 
 ## Rebuild 重建
 
