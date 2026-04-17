@@ -34,6 +34,13 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 
 
 
+```
+mamba install ipykernel
+python -m ipykernel install --user --name goni-metal --display-name "Py311 Goni-metal"
+```
+
+
+
 ### STalign
 
 见[STalign](/computer/STalign.md)
@@ -82,11 +89,9 @@ IRkernel::installspec(user = TRUE, name = "faxai-r", displayname = "R453 Faxai")
 q()
 ```
 
-
+### 
 
 ### SIMO
-
-
 
 ```
 mamba create -n simo python=3.8 -y
