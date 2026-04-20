@@ -17,6 +17,21 @@ article: False
 
 ## Installation
 
+### new
+
+```bash
+mamba create -n Mujigae -c conda-forge -c bioconda --strict-channel-priority python=3.11 scenicplus pycistopic ipykernel -y
+python -m ipykernel install --user --name=mujigae --display-name "Mujigae Py311"
+
+pip install lda
+
+mamba install openjdk
+```
+
+
+
+### old
+
 ①首先将这五个包在github上下载并上传至服务器`~/packgae_python`
 
 ②安装代码

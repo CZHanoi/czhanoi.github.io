@@ -111,7 +111,20 @@ python -m ipykernel install --user --name simo --display-name "Py38 SIMO"
 
 - 主要用于[SCENIC+](https://scenicplus.readthedocs.io/en/latest/)分析
 
-  
+
+
+### macs2
+
+用于使用[`macs2`]()
+
+```bash
+mamba create -n macs2 macs2 -c conda-forge -c bioconda --strict-channel-priority
+mamba activate macs2
+which macs2
+# /cwStorage/home/chenzhh/miniforge3/envs/macs2/bin/macs2
+```
+
+
 
 ## Rebuild 重建
 
