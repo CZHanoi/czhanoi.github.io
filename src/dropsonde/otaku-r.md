@@ -44,6 +44,7 @@ install.packages("BiocManager")
 install.packages("remotes")
 remotes::install_github("mojaveazure/seurat-disk")
 
+mamba install -c conda-forge -c bioconda  r-dplyr r-stringr r-ggplot2 r-readxl r-writexl r-msigdbr bioconductor-clusterprofiler bioconductor-org.hs.eg.db bioconductor-reactomepa
 ```
 
 查看R的地址:
