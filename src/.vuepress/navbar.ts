@@ -76,7 +76,12 @@ export default navbar([
 
     ],
   },
+  { text: '风碑',
+  icon: 'fa6-solid:c',
+  link: '/monument/' },
   { text: 'Ashoka',
   icon: 'fa6-solid:dharmachakra',
-  link: '/ashoka/' },
+  link: '/ashoka/' }
+
+
 ]);
