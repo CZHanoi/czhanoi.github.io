@@ -11,7 +11,16 @@ article: true
 
 ---
 
-
+<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
+    "Him that overcometh will I make a pillar in the temple of my God,<br>
+    and he shall go no more out:<br>
+    and I will write upon him the name of my God,<br>
+    and the name of the city of my God, which is new Jerusalem,<br>
+    which cometh down out of heaven from my God:<br>
+    and I will write upon him my new name."
+    <br>
+    <span style="font-size: 0.9rem; color: #777;">— Revelation 3:12 (King James Version)</span>
+</blockquote>
 
 ## 更新后版本
 
