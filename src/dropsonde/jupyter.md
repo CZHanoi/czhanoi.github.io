@@ -21,6 +21,92 @@ article: true
     <br>
     <span style="font-size: 0.9rem; color: #777;">— Revelation 3:12 (King James Version)</span>
 </blockquote>
+## CFFF平台
+
+主要目的：解决连上梯子之后打不开cfff的问题。
+
+创建一个实例之后，可以在实例界面的`操作`下面点击`远程连接`，获得下面的一行命令
+
+```bash
+ssh -p 30089 zy_22111220045@10.193.2.99
+```
+
+上面的命令直接在电脑终端运行，即就是正常打开一个CFFF上的一个终端。
+
+好命令，不过我要稍作修改（）
+
+### ①本地运行
+
+```bash
+ssh -N -L 1515:127.0.0.1:8088 -p 30089 zy_22111220045@10.193.2.99
+```
+
+上面的`1515`可以换为任意端口号，对应在自己电脑打开的端口。
+
+上面的`8088`是固定的（应该），来自在DSW平台下面命令的查看
+
+```bash
+jupyter server list
+Currently running servers:
+http://127.0.0.1:8088/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
+http://127.0.0.1:8088/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
+```
+
+### ②浏览器中输入
+
+上面命令运行之后，输入密码之后即可在浏览器中直接打开
+
+```c
+http://localhost:1515/dsw-30794
+#或者:
+http://127.0.0.1:8890/dsw-30794/
+```
+
+然后打开之后就是和CFFF上`直接打开`相同的页面了。要说有什么用，就是后面这个方法在打开梯子的时候仍可运行。
+
+### ③进阶：本地VSCode
+
+同样的，可以使用`VSCode`调用服务器上的kernel。
+
+<div style="text-align: center;" id="fig0">
+    <img src="./jupyter-image/1.png" style="width:80%">
+    <div>
+        <span style="color:gray">第y①步：为一个jupyter notebook选择一个kernel</span>
+        <br><br>
+    </div>
+</div>
+
+<div style="text-align: center;" id="fig0">
+    <img src="./jupyter-image/2.png" style="width:80%">
+    <div>
+        <span style="color:gray">第②步：中间步骤</span>
+        <br><br>
+    </div>
+</div>
+
+
+
+<div style="text-align: center;" id="fig0">
+    <img src="./jupyter-image/3.png" style="width:80%">
+    <div>
+        <span style="color:gray">第③步：链接远程jupyter lab</span>
+        <br><br>
+    </div>
+</div>
+
+
+
+
+
+<div style="text-align: center;" id="fig0">
+    <img src="./jupyter-image/4.png" style="width:80%">
+    <div>
+        <span style="color:gray">第④步：后续使用</span>
+        <br><br>
+    </div>
+</div>
+
+
 
 ## 更新后版本
 
