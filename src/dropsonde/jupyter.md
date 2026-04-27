@@ -48,8 +48,8 @@ ssh -N -L 1515:127.0.0.1:8088 -p 30089 zy_22111220045@10.193.2.99
 ```bash
 jupyter server list
 Currently running servers:
-http://127.0.0.1:8088/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
-http://127.0.0.1:8088/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
+http://127.0.0.1:1515/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
+http://127.0.0.1:1515/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
 ```
 
 ### ②浏览器中输入
