@@ -64,6 +64,10 @@ export default hopeTheme({
     mark: true,
     plantuml: true,
     spoiler: true,
+    math: {
+        type: "mathjax",
+        output: "svg",
+      },
     stylize: [
       {
         matcher: "Recommended",
@@ -83,7 +87,7 @@ export default hopeTheme({
     tasklist: true,
     vPre: true,
   },
-    mathjax: true,
+    
 
   plugins: {
     blog: true,
