@@ -83,9 +83,7 @@ export default hopeTheme({
     tasklist: true,
     vPre: true,
   },
-  math: {
-      type: "katex",
-    },
+    mathjax: true,
 
   plugins: {
     blog: true,
