@@ -19,8 +19,9 @@ sticky: 99
         Sanskrit: इहैव निधनं यामो महाप्रस्थानमेव वा।
     </span>
 </blockquote>
-
 ## 耶尼切里 Janissary
+
+——单细胞技术整理
 
 <div class="vp-card-container">
   <VPCard
@@ -35,13 +36,16 @@ sticky: 99
 | 基础代码 | 简介 |
 | :--- | :--- |
 | [Convert](./convert/) | 格式转换，格式 |
-| [SCENIC+](./scenicplus.md) | SCENIC+ |
+| [SCENIC+](./code/scenicplus.md) | SCENIC+ |
 | [gsMap](./gsmap.md) | gsMap |
 | [STalign](./STalign.md) | STalign 配准 |
+| [hdWGCNA](./code/hdWGCNA.md) |  |
 
 
 
 ##  坦齐马特 Tanzimat
+
+——遗传相关技术整理
 
 <div class="vp-card-container">
    <VPCard
@@ -55,12 +59,18 @@ sticky: 99
 
 代码分区块整理：
 
-### 组学-矩阵数据分析
+### [GCTA](./gcta)
+
+👉🏻[文档地址](https://yanglab.westlake.edu.cn/software/gcta/#Overview)
 
 
-|         |      |      |
-| :-----: | :--: | :--: |
-| hdWGCNA |      |      |
-|         |      |      |
-|         |      |      |
+
+
+
+
+|      |      |      |
+| :--: | :--: | :--: |
+|      |      |      |
+|      |      |      |
+|      |      |      |
 

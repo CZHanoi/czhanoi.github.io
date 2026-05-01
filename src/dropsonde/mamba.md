@@ -81,6 +81,7 @@ mamba install -y -c conda-forge -c bioconda --strict-channel-priority r-data.tab
   bioconductor-biomart bioconductor-zellkonverter bioconductor-singlecellexperiment
   
 mamba install r-bpcells r-wgcna bioconductor-edger r-gprofiler -y
+mamba install -c conda-forge r-broom r-purrr
 ```
 
 
