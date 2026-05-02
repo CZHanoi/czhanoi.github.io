@@ -158,6 +158,8 @@ which macs2
 
 **我将选择第①种：******下面的任务只需要运行一下！！！！**
 
+### 安装`Miniforge3`
+
 下载
 
 ```bash
@@ -170,7 +172,17 @@ https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Lin
 bash Miniforge3-Linux-x86_64.sh -b -p /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/miniforge3
 ```
 
-**每次用新的镜像创建新的DSW时运行：**
+### **每次用新的镜像创建新的DSW时运行：**
+
+基础配置
+
+```bash
+cat > ~/.bash_profile <<'EOF'
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
+EOF
+```
 
 写入`~/.bashrc`
 
@@ -200,6 +212,29 @@ source ~/.bashrc
 echo $MAMBA_ROOT_PREFIX
 which mamba
 mamba --version
+```
+
+### 解决`pkgs`冲突问题
+
+```bash
+CONDARC="/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/miniforge3/.condarc"
+
+# cp "$CONDARC" "${CONDARC}.bak.$(date +%Y%m%d%H%M%S)"
+
+mkdir -p "$HOME/.conda/pkgs"
+
+cat > "$CONDARC" <<EOF
+channels:
+  - conda-forge
+
+pkgs_dirs:
+  - $HOME/.conda/pkgs
+
+mirrored_channels:
+  conda-forge:
+    - https://conda.anaconda.org/conda-forge
+    - https://prefix.dev/conda-forge
+EOF
 ```
 
 

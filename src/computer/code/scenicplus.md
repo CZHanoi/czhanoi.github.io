@@ -55,6 +55,7 @@ python -m pip install -r /tmp/scenicplus.req
 #  python -m pip install --force-reinstall "igraph==0.11.4" "leidenalg==0.10.2" "pybedtools==0.9.1" "pybigtools==0.1.2" "pysam==0.22.0" "tables==3.9.2" --no-deps
 
 python -m pip install --no-deps ./pySCENIC ./LoomXpy ./pycistarget ./pycisTopic ./scenicplus
+pip install "matplotlib-inline==0.1.7"
 ```
 
 ③验证
