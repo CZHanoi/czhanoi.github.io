@@ -1,7 +1,7 @@
 ---
 title: Mamba 
 date: 2026-03-02
-cover: CRYCHIC.webp
+cover: renaissance.jpeg
 category:
   - Oracle
 tag:
@@ -123,6 +123,110 @@ mamba create -n macs2 macs2 -c conda-forge -c bioconda --strict-channel-priority
 mamba activate macs2
 which macs2
 # /cwStorage/home/chenzhh/miniforge3/envs/macs2/bin/macs2
+```
+
+
+
+## Cfff平台的mamba建立
+
+
+
+### 前言-为什么不能安装在`$HOME`下面？
+
+#### 容器内文件系统的两类区域：
+
+**1. 临时层（容器自己的根文件系统）**
+
+- 包括 `/`、`/usr`、`/etc`、`/root`、`/home/zy_22111220045` 等等。
+- 这些来自**镜像**。镜像是**只读**模板，容器启动时会在镜像之上加一层"可写层"（overlayfs / aufs 之类）让你能改东西。
+- 但这一层**容器销毁就没了**。DSW 关闭、重启、扩缩容、迁移到别的物理机时，容器会被重建，可写层丢失，回到镜像里的初始状态。
+- 所以 `~`存在镜像中，简单说就是在 home 里装的东西是绑定镜像的（对每个DSW来说，重要的是`~/.bashrc`）
+
+**2. 持久层（外挂存储 / 数据卷）**
+
+- `/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045` 这种路径，是 **CPFS**（阿里云的并行文件系统，类似 Lustre）通过网络挂载进容器的。
+- 它**不在容器里**，物理上存在远端的存储集群。容器只是把它"挂载"到这个路径。
+- 容器销毁、重建、换机器都不会影响 CPFS 里的数据。所以这个目录下的东西**永远在**。
+
+
+
+由此，我们的思路就很明确了；
+
+①如果这个mamba想被HPC调用，或者多个容器打开不同的DSW都能使用→安装在持久层；
+
+②如果这个mamba只想自己用，则→安装在临时层，然后保存镜像。
+
+**我将选择第①种：******下面的任务只需要运行一下！！！！**
+
+下载
+
+```bash
+https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+```
+
+然后
+
+```bash
+bash Miniforge3-Linux-x86_64.sh -b -p /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/miniforge3
+```
+
+**每次用新的镜像创建新的DSW时运行：**
+
+写入`~/.bashrc`
+
+```bash
+cat >> ~/.bashrc <<'EOF'
+
+# ---- mamba (Miniforge3) on shared storage ----
+export MAMBA_ROOT_PREFIX=/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/miniforge3
+export PATH=$MAMBA_ROOT_PREFIX/bin:$PATH
+export CONDARC=$MAMBA_ROOT_PREFIX/.condarc
+
+if [ -f "$MAMBA_ROOT_PREFIX/etc/profile.d/conda.sh" ]; then
+    source "$MAMBA_ROOT_PREFIX/etc/profile.d/conda.sh"
+fi
+if [ -f "$MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh" ]; then
+    source "$MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh"
+fi
+# -----------------------------------------------
+EOF
+
+```
+
+然后检查
+
+```bash
+source ~/.bashrc
+echo $MAMBA_ROOT_PREFIX
+which mamba
+mamba --version
+```
+
+
+
+## ※HPC任务调用自己的mamba环境
+
+
+
+需要在脚本中显式`source`
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=myjob
+#SBATCH --output=%j.out
+# 其他 SBATCH 指令...
+
+# === 显式加载 mamba（不依赖 ~/.bashrc）===
+export MAMBA_ROOT_PREFIX=/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/miniforge3
+export PATH=$MAMBA_ROOT_PREFIX/bin:$PATH
+export CONDARC=$MAMBA_ROOT_PREFIX/.condarc
+source $MAMBA_ROOT_PREFIX/etc/profile.d/conda.sh
+source $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh
+
+# === 激活环境，跑程序 ===
+mamba activate myenv
+python train.py
+
 ```
 
 

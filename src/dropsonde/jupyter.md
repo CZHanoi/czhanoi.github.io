@@ -25,6 +25,35 @@ article: true
 
 主要目的：解决连上梯子之后打不开cfff的问题。
 
+### ※〇确保SSH正确运行
+
+这是最重要的前提！！！！
+
+在DSW端运行：
+
+```bash
+ps -ef | grep '[s]shd'
+command -v sshd
+```
+
+有输出，证明这个镜像安装了`sshd`并正在正确运行；
+
+否则就是所选的这个镜像过于新或者压根儿没有安装`sshd`；
+
+由于安装`sshd`的过程过于曲折，但还想选一个相对干净的镜像的话，建议选择下面两个：
+
+```
+master0:5000/eflops/py3.6-torch1.8-cuda11.1-rdma5.2-sshd-ubuntu18.04
+master0:5000/eflops/sshd:v1
+# 即名字里至少带有`sshd`
+```
+
+有的镜像干净到`sudo`和`chmod`这样的命令都没有……；
+
+
+
+### 正式开始
+
 创建一个实例之后，可以在实例界面的`操作`下面点击`远程连接`，获得下面的一行命令
 
 ```bash
@@ -39,6 +68,7 @@ ssh -p 30089 zy_22111220045@10.193.2.99
 
 ```bash
 ssh -N -L 1515:127.0.0.1:8088 -p 30089 zy_22111220045@10.193.2.99
+ssh -N -L 2604:127.0.0.1:8088 -p 30143 zy_22111220045@10.193.2.99
 ```
 
 上面的`1515`可以换为任意端口号，对应在自己电脑打开的端口。
@@ -48,19 +78,33 @@ ssh -N -L 1515:127.0.0.1:8088 -p 30089 zy_22111220045@10.193.2.99
 ```bash
 jupyter server list
 Currently running servers:
-http://127.0.0.1:1515/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
-http://127.0.0.1:1515/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
+http://127.0.0.1:8088/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
+http://127.0.0.1:8088/dsw-30794/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
 ```
+
+抑或是：
+
+```bash
+/etc/dsw/bin/jupyter server list
+Currently running servers:
+http://127.0.0.1:8088/dsw-33818/ :: /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045
+```
+
+
 
 ### ②浏览器中输入
 
 上面命令运行之后，输入密码之后即可在浏览器中直接打开
 
-```c
-http://localhost:1515/dsw-30794
-#或者:
-http://127.0.0.1:8890/dsw-30794/
+```bash
+http://localhost:1515/dsw-30794/
+http://127.0.0.1:1515/dsw-30794/
+# 或者
+http://localhost:2604/dsw-33823/lab?
+http://127.0.0.1:2604/dsw-33823/lab?
 ```
+
+
 
 然后打开之后就是和CFFF上`直接打开`相同的页面了。要说有什么用，就是后面这个方法在打开梯子的时候仍可运行。
 
