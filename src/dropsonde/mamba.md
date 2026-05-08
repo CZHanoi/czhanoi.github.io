@@ -127,6 +127,20 @@ which macs2
 
 
 
+### Otaku
+
+R语言全都分析
+
+```
+mamba create -n Otaku r-base r-seurat r-signac scanpy r-dplyr r-stringr r-ggplot2 r-readxl r-writexl r-msigdbr bioconductor-clusterprofiler bioconductor-org.hs.eg.db bioconductor-reactomepa r-archr -y -c bioconda
+mamba install r-irkernel -y
+
+IRkernel::installspec(user = TRUE, name = "otaku", displayname = "Otaku")
+q()
+```
+
+
+
 ## Cfff平台的mamba建立
 
 
