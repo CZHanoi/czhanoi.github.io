@@ -74,3 +74,69 @@ mamba install ipykernel
 python -m ipykernel install --user --name=mujigae --display-name "Mujigae Py311"
 ```
 
+
+
+### create_cistarget_databases 安装
+
+
+
+```
+mamba create -n create_cistarget_databases \
+    'python=3.10' \
+    'numpy=1.21' \
+    'pandas>=1.4.1' \
+    'pyarrow>=7.0.0' \
+    'numba>=0.55.1' \
+    'python-flatbuffers'
+```
+
+
+
+```bash
+mamba activate create_cistarget_databases
+
+cd "${CONDA_PREFIX}/bin"
+# mamba install -c conda-forge wget ca-certificates openssl -y
+# Download precompiled Cluster-Buster binary.
+wget https://resources.aertslab.org/cistarget/programs/cbust
+
+# Make downloaded binary executable.
+chmod a+x cbust
+
+# Download liftOver.
+wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/liftOver
+
+# Download bigWigAverageOverBed.
+wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/bigWigAverageOverBed
+
+# Make downloaded binaries executable.
+chmod a+x liftOver bigWigAverageOverBed
+```
+
+安装之后：
+
+```bash
+(create_cistarget_databases) [chenzhh@headcw create_cisTarget_databases-master]$ pwd
+/cwStorage/home/chenzhh/package/python/create_cisTarget_databases-master
+(create_cistarget_databases) [chenzhh@headcw create_cisTarget_databases-master]$ ls
+bigwigaverageoverbed.py
+cistarget_db.py
+clusterbuster.py
+combine_partial_motifs_or_tracks_vs_regions_or_genes_scores_cistarget_dbs.py
+combine_partial_regions_or_genes_vs_motifs_or_tracks_scores_cistarget_dbs.py
+convert_cistarget_databases_v1_to_v2.py
+convert_feather_db_to_sqlite3_db.py
+convert_motifs_or_tracks_vs_regions_or_genes_scores_to_rankings_cistarget_dbs.py
+create_cistarget_motif_databases.py
+create_cistarget_track_databases.py
+create_cross_species_motifs_rankings_db.py
+create_fasta_with_padded_bg_from_bed.sh
+feather_v1_fbs
+feather_v1_or_v2.py
+orderstatistics.py
+pyproject.toml
+README.md
+test_cistarget_db.py
+test_orderstatistics.py
+```
+

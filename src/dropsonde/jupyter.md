@@ -267,10 +267,25 @@ R
 
 然后运行
 
+```bash
+mamba install r-irkernel -y
+Rscript -e 'IRkernel::installspec(user = TRUE, name = "otaku", displayname = "Otaku")'
+```
+
+或者：
+
 ```R
 install.packages("IRkernel")# , repos="https://cloud.r-project.org")
 IRkernel::installspec(user = TRUE, name = "ir-r4", displayname = "R (r4)")
 q()
+```
+
+### kernel卸载
+
+```
+jupyter kernelspec list
+
+jupyter kernelspec uninstall <kernel_name>
 ```
 
 

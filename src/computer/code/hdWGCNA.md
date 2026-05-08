@@ -17,8 +17,8 @@ article: true
 将`hdWGCNA`安装到经典环境[`Otaku`]()下面
 
 ```bash
-mamba install -c conda-forge -c bioconda r-seurat r-hdf5r r-wgcna r-igraph r-tidyverse r-ggraph r-harmony r-enrichr r-devtools bioconductor-ucell bioconductor-genomicranges bioconductor-geneoverlap
-R -q -e 'remotes::install_local("/path/to/hdWGCNA", dependencies = TRUE, upgrade = "never")'
+mamba install -c conda-forge -c bioconda r-seurat r-hdf5r r-wgcna r-igraph r-tidyverse r-ggraph r-harmony r-enrichr r-devtools r-remotes bioconductor-ucell bioconductor-genomicranges bioconductor-geneoverlap
+R -q -e 'remotes::install_local("/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/Package/R/hdWGCNA", dependencies = TRUE, upgrade = "never")'
 ```
 
 验证

@@ -18,3 +18,15 @@ tag:
 </blockquote>
 
 
+```bash
+mamba create -n Tanzimat -c conda-forge python=3.11 numpy pandas jupyterlab ipykernel
+mamba activate Tanzimat
+ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/plink2 "$CONDA_PREFIX/bin/plink2"
+ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/gcta   "$CONDA_PREFIX/bin/gcta"
+ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/mph    "$CONDA_PREFIX/bin/mph"
+
+which plink2
+which gcta
+which mph
+```
+

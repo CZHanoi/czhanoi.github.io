@@ -37,10 +37,27 @@ sticky: 120
 
 #### 验收目标：
 
+
+
+- [ ] 应帝王：78.2kg(BMI 24)
+
+​	<span style="color: red; font-weight: bold;">预估</span>时间：2026-07-01
+
 - [ ] 涅槃：81.5kg (BMI 25)
+
+​	<span style="color: red; font-weight: bold;">预估</span>时间：**2026-06-16**
+
 - [ ] 轮转：85.5kg (BMI 26)
-- [ ] 操持：91.5kg (BMI 28)
+
+​	<span style="color: red; font-weight: bold;">预估</span>时间：2026-05-20
+
+- [x] 操持：91.5kg (BMI 28)
+
+​	***达成时间：2026-05-07***
+
 - [x] 宁玛：97.2kg (BMI 30)
+
+  ***达成时间：2025-11-17***
 
 
 
