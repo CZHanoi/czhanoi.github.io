@@ -9,7 +9,11 @@ export default defineUserConfig({
 
   lang: "en-US",
   title: "CZHanoi",
-  description: "To cherish ones who remember me",
+  description: "On the Road to Jerusalem",
+
+  head: [
+    ["link", { rel: "icon", type: "image/png", href: "/logoDark.png" }],
+  ],
 
   theme,
   // plugins: [
