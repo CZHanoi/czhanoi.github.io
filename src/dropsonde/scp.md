@@ -1,5 +1,5 @@
 ---
-title: 杂记
+title: 代理与传输
 date: 2026-03-02
 cover: CRYCHIC.webp
 category:
