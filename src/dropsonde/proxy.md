@@ -2,6 +2,7 @@
 title: 代理
 date: 2026-05-17
 cover: proxy.jpg
+icon: fa6-solid:user-shield
 category:
   - Oracle
 tag:
@@ -150,5 +151,79 @@ os.environ.update({
 ```python
 for k in ["http_proxy", "https_proxy", "HTTP_PROXY", "HTTPS_PROXY", "all_proxy", "ALL_PROXY", "no_proxy", "NO_PROXY"]:
     os.environ.pop(k, None)
+```
+
+
+
+## ※ 代理到服务器！
+
+注：*一旦开始使用，🪜的流量会飞一样流逝QAQ……*
+
+### SSH 反向代理转发
+
+#### ①再次确认本地开启代理
+
+```bash
+lsof -iTCP:7897 -sTCP:LISTEN -n -P
+
+# 测试能否访问github
+# curl -I -x http://127.0.0.1:7897 https://github.com
+```
+
+得到下面输出：
+
+```
+COMMAND     PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+com.vorte 23018 hanoi   10u  IPv6 0xd2ea14628adac5dd      0t0  TCP *:7897 (LISTEN)
+```
+
+#### ②打通服务器-cfff
+
+```bash
+ssh -N \
+  -L 1515:127.0.0.1:8088 \
+  -R 127.0.0.1:17897:127.0.0.1:7897 \
+  -p 30089 zy_22111220045@10.193.2.99
+```
+
+```bash
+ssh -N -L 2604:127.0.0.1:8088 -R 127.0.0.1:17897:127.0.0.1:7897 -p 30143 zy_22111220045@10.193.2.99
+```
+
+相比之前，`-R`的作用是让服务器访问自己的 `127.0.0.1:17897`，其实会通过 SSH 访问你 Mac 的 `127.0.0.1:7897`。
+
+测试是否打通：
+
+```bash
+export http_proxy=http://127.0.0.1:17897
+export https_proxy=http://127.0.0.1:17897
+export HTTP_PROXY=http://127.0.0.1:17897
+export HTTPS_PROXY=http://127.0.0.1:17897
+export all_proxy=http://127.0.0.1:17897
+export ALL_PROXY=http://127.0.0.1:17897
+export no_proxy=localhost,127.0.0.1,::1
+export NO_PROXY=localhost,127.0.0.1,::1
+# 测试可否链接github
+curl -I https://github.com
+```
+
+得到输出就打通了。
+
+验证：`git`安装[`SCENIC+`](/golden-rain/multi-omics-atac/scenicplus.md)
+
+```
+
+```
+
+
+
+### ②打通服务器-类脑登录节点
+
+
+
+TBA后面再写
+
+```
+
 ```
 
