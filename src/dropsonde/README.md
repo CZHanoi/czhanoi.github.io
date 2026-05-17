@@ -1,5 +1,5 @@
 ---
-cover: drop.jpg
+cover: drop.png
 date: 2025-11-22
 title: Dropsonde Plan
 icon: torii-gate
