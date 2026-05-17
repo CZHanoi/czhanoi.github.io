@@ -27,3 +27,11 @@ scp -P 30089 -r "$(pwd)" zy_22111220045@10.193.2.99:/cpfs01/projects-HDD/cfff-af
 zip -r TF.zip ./TF -x "*/.git/*" -x "*/__pycache__/*" -x "*.pyc"
 ```
 
+### 查看
+
+```bash
+ps -eo user,%cpu --no-headers | awk '{cpu[$1]+=$2} END {for (u in cpu) print u, cpu[u]}' | sort -k2 -nr | head
+
+ps -eo user,%mem --no-headers | awk '{mem[$1]+=$2} END {for (u in mem) print u, mem[u]}' | sort -k2 -nr | head
+```
+
