@@ -10,7 +10,13 @@ star: False
 article: False
 ---
 
-
+<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
+    The might of one fair face sublimes my love,
+    ...
+    I live and love in God's peculiar light.
+    <br>
+    <span style="font-size: 0.9rem; color: #777;">— Michelangelo Buonarroti, <em>Sonnet</em></span>
+</blockquote>
 
 
 
