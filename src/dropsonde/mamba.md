@@ -141,6 +141,16 @@ q()
 
 
 
+### allen-atlas
+
+```bash
+mamba create -n allen-atlas -c conda-forge python=3.12 brainglobe-atlasapi scanpy pandas ipykernel jupyterlab -y
+mamba activate allen-atlas
+python -m ipykernel install --user --name allen-atlas --display-name "Python (allen-atlas)"
+```
+
+
+
 ## Cfff平台的mamba建立
 
 
