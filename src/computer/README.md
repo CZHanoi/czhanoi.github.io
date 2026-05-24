@@ -69,6 +69,10 @@ sticky: 99
 
 
 
+### [ANNOVAR](./annovar)
+
+👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
+
 
 
 
