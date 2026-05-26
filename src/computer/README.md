@@ -63,22 +63,27 @@ sticky: 99
 
 代码分区块整理：
 
-### [GCTA](./gcta)
+### [GCTA](./Tanzimat/GCTA.md)
 
 👉🏻[文档地址](https://yanglab.westlake.edu.cn/software/gcta/#Overview)
 
 
 
-### [ANNOVAR](./annovar)
+### [ANNOVAR](./Tanzimat/ANNOVAR.md)
 
 👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
 
 
+### [MPH](./Tanzimat/GCTA.md)
 
-|      |      |      |
-| :--: | :--: | :--: |
-|      |      |      |
-|      |      |      |
-|      |      |      |
+👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
+
+
+
+## [STAAR](### [MPH](./Tanzimat/STAAR.md)
+
+👉🏻[STAAR github](https://github.com/li-lab-genetics/STAAR)
+
+👉🏻[cellSTAAR github](https://github.com/edvanburen/cellSTAAR/)
 

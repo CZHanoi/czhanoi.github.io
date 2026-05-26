@@ -211,8 +211,48 @@ curl -I https://github.com
 
 验证：`git`安装[`SCENIC+`](/golden-rain/multi-omics-atac/scenicplus.md)
 
+#### ③塞入mamba环境
+
+```bash
+conda env config vars set \
+  http_proxy=http://127.0.0.1:17897 \
+  https_proxy=http://127.0.0.1:17897 \
+  HTTP_PROXY=http://127.0.0.1:17897 \
+  HTTPS_PROXY=http://127.0.0.1:17897 \
+  all_proxy=http://127.0.0.1:17897 \
+  ALL_PROXY=http://127.0.0.1:17897 \
+  no_proxy=localhost,127.0.0.1,::1 \
+  NO_PROXY=localhost,127.0.0.1,::1
+  
+env | grep -i proxy
+curl -I https://github.com
 ```
 
+
+
+在R中安装包的时候需要显式指定`github_pat`（目前没有什么更好的方法，唉）
+
+```R
+proxy <- "http://127.0.0.1:17897"
+
+Sys.setenv(
+  http_proxy  = proxy,
+  https_proxy = proxy,
+  HTTP_PROXY  = proxy,
+  HTTPS_PROXY = proxy,
+  all_proxy   = proxy,
+  ALL_PROXY   = proxy,
+  no_proxy    = "localhost,127.0.0.1,::1",
+  NO_PROXY    = "localhost,127.0.0.1,::1",
+  GITHUB_PAT  = "贴出github_token"
+)
+
+Sys.getenv("GITHUB_PAT") != ""
+
+remotes::install_github(
+  "edvanburen/cellSTAAR",
+  auth_token = Sys.getenv("GITHUB_PAT")
+)
 ```
 
 
