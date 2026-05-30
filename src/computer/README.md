@@ -73,6 +73,13 @@ sticky: 99
 
 👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
+### [VEP](./Tanzimat/VEP.md)
+
+👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
+
+### [freesurfer&fsl](./Tanzimat/fs.md)
+
+👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
 
 ### [MPH](./Tanzimat/GCTA.md)
