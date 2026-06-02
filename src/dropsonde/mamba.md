@@ -151,6 +151,29 @@ python -m ipykernel install --user --name allen-atlas --display-name "Python (al
 
 
 
+### Janissary
+
+```bash
+mamba create -n Janissary git python "numpy>=1.11.0" "matplotlib>=2.0.0" "vtk=9.3.1" nibabel pillow "pandas<=1.3.0" "scipy>=0.17.0" "scikit-learn>=0.22.0" nilearn
+git clone https://github.com/MICA-MNI/ENIGMA.git
+cd ENIGMA
+python setup.py install
+python -m ipykernel install --user --name janissary --display-name "Janissary"
+
+# mamba install -c conda-forge xvfbwrapper
+sudo apt-get install -y xvfb xauth
+```
+
+
+
+### HARE
+
+```
+
+```
+
+
+
 ## Cfff平台的mamba建立
 
 
