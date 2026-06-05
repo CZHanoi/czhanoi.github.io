@@ -10,10 +10,12 @@ tag:
 ---
 
 <blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
-    "Come unto me, all ye that labour and are heavy laden,<br>
-    and I will give you rest."
+    "But come ye back, when summer's in the meadow,<br>
+    Or when the valley's hushed and white with snow;<br>
+    It's I'll be here in sunshine or in shadow,<br>
+    Oh, Danny boy, Danny boy I love you, so."
     <br>
-    <span style="font-size: 0.9rem; color: #777;">— Matthew 11:28 (King James Version)</span>
+    <span style="font-size: 0.9rem; color: #777;">— “Danny Boy” by Frederic Edward Weatherly (1913)</span>
 </blockquote>
 
 

@@ -9,11 +9,13 @@ tag:
   - format
 ---
 
+
 <blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
-    "Come unto me, all ye that labour and are heavy laden,<br>
-    and I will give you rest."
+    "How can I move thee?<br>
+    Will no entreaties cause thee to turn a favourable eye upon thy creature,<br>
+    who implores thy goodness and compassion?"
     <br>
-    <span style="font-size: 0.9rem; color: #777;">— Matthew 11:28 (King James Version)</span>
+    <span style="font-size: 0.9rem; color: #777;">— Mary Wollstonecraft Shelley, <em>Frankenstein; or, The Modern Prometheus</em>, Chapter 10</span>
 </blockquote>
 
 
