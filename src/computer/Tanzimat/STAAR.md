@@ -53,17 +53,14 @@ remotes::install_github(
   "edvanburen/cellSTAAR",
   auth_token = Sys.getenv("GITHUB_PAT")
 )
+
+library(devtools)
+devtools::install_github("li-lab-genetics/MetaSTAARlite",ref="main", auth_token = Sys.getenv("GITHUB_PAT"))
 ```
 
 
 
 ```
-ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/plink2 "$CONDA_PREFIX/bin/plink2"
-ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/gcta   "$CONDA_PREFIX/bin/gcta"
-ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/mph    "$CONDA_PREFIX/bin/mph"
 
-which plink2
-which gcta
-which mph
 ```
 

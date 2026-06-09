@@ -94,6 +94,8 @@ sticky: 99
 
 👉🏻[cellSTAAR github](https://github.com/edvanburen/cellSTAAR/)
 
+👉🏻[MetaSTAARlite github](https://github.com/li-lab-genetics/MetaSTAARlite/)
+
 
 
 
