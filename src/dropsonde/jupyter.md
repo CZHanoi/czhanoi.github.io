@@ -23,6 +23,18 @@ article: true
 </blockquote>
 
 
+```bash
+ps -eo user,%cpu --no-headers | awk '{cpu[$1]+=$2} END {for (u in cpu) print u, cpu[u]}' | sort -k2 -nr | head
+```
+
+
+
+```bash
+ps -eo user,%mem --no-headers | awk '{mem[$1]+=$2} END {for (u in mem) print u, mem[u]}' | sort -k2 -nr | head
+```
+
+
+
 ## CFFF平台
 
 主要目的：解决连上梯子之后打不开cfff的问题。

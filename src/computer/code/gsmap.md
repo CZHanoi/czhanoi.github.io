@@ -15,6 +15,16 @@ article: true
 
 ## Install
 
+在cfff上gsMap已经归入[`Tanzimat`](../README.md)
+
+```bash
+git clone https://github.com/JianYang-Lab/gsMap
+cd gsMap
+pip install -e .
+```
+
+
+
 
 
 ```bash
@@ -68,6 +78,8 @@ nohup bash /public/home/chenzhh/Ashoka/Goni2/02_gsmap_trait_step4_6.sh \
   > /public/home/chenzhh/Ashoka/Goni2/logs/26663-2.0.step4_6.nohup.out 2>&1 &
 
 ```
+
+
 
 ## 皮层兴奋性神经元（GLU，谷氨酸能）
 

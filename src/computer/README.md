@@ -63,26 +63,31 @@ sticky: 99
 
 代码分区块整理：
 
-### [GCTA](./Tanzimat/GCTA.md)
+
+
+### 遗传度
+
+#### [GCTA](./Tanzimat/GCTA.md)
 
 👉🏻[文档地址](https://yanglab.westlake.edu.cn/software/gcta/#Overview)
 
-
-
-### [ANNOVAR](./Tanzimat/ANNOVAR.md)
+#### [MPH](./Tanzimat/GCTA.md)
 
 👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
-### [VEP](./Tanzimat/VEP.md)
+
+
+### 注释
+
+#### [ANNOVAR](./Tanzimat/ANNOVAR.md)
+
+👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
+
+#### [VEP](./Tanzimat/VEP.md)
 
 👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
 ### [freesurfer&fsl](./Tanzimat/fs.md)
-
-👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
-
-
-### [MPH](./Tanzimat/GCTA.md)
 
 👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
@@ -100,3 +105,13 @@ sticky: 99
 
 
 ## [Evo](./Tanzimat/Evolution.md)
+
+👉🏻[HARE](https://github.com/ossmith/HARE)
+
+
+
+### [→scRNA-seq](./Tanzimat/sc.md)
+
+#### [gsMap](./Tanzimat/sc.md#gsMap)
+
+👉🏻[文档地址](https://yanglab.westlake.edu.cn/gsmap/document/software)

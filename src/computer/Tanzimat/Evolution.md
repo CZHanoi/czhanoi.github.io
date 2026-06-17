@@ -18,14 +18,10 @@ tag:
 
 
 ```bash
-mamba create -n Tanzimat -c conda-forge python=3.11 numpy pandas jupyterlab ipykernel
-mamba activate Tanzimat
-ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/plink2 "$CONDA_PREFIX/bin/plink2"
-ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/gcta   "$CONDA_PREFIX/bin/gcta"
-ln -sf /cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/gyj_data/software/mph    "$CONDA_PREFIX/bin/mph"
-
-which plink2
-which gcta
-which mph
+mamba create -y -n hare -c conda-forge -c bioconda -c defaults python=3.11 pip setuptools=52.0.0 bedtools=2.30.0 ensembl-vep=105 perl=5.32 perl-bioperl=1.7.8 perl-set-intervaltree perl-compress-raw-zlib htslib samtools git wget unzip numpy pandas scipy matplotlib
+git clone https://github.com/ossmith/HARE.git
+cd HARE
+mamba activate hare
+python -m pip install .
 ```
 
