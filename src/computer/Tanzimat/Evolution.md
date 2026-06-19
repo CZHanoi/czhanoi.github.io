@@ -17,11 +17,35 @@ tag:
 </blockquote>
 
 
+
+
+## HARE
+
+
+
 ```bash
-mamba create -y -n hare -c conda-forge -c bioconda -c defaults python=3.11 pip setuptools=52.0.0 bedtools=2.30.0 ensembl-vep=105 perl=5.32 perl-bioperl=1.7.8 perl-set-intervaltree perl-compress-raw-zlib htslib samtools git wget unzip numpy pandas scipy matplotlib
+mamba create -y -n HARE -c conda-forge -c bioconda -c defaults python=3.11 pip setuptools bedtools=2.30.0 ensembl-vep=105 perl=5.32 perl-bioperl=1.7.8 perl-set-intervaltree perl-compress-raw-zlib htslib samtools git wget unzip numpy pandas scipy matplotlib
 git clone https://github.com/ossmith/HARE.git
 cd HARE
 mamba activate hare
 python -m pip install .
 ```
+
+
+
+
+
+## S-LDSC
+
+###  Install
+
+```bash
+git clone -b ldsc39 https://github.com/CBIIT/ldsc.git
+mamba create --name ldsc python=3.9
+mamba activate ldsc
+mamba install -c conda-forge -c bioconda bitarray=2 nose=1.3 pybedtools=0.10.0 pip flask requests numpy=1.21.5 pandas=1.3.3 scipy=1.7.3 -y
+
+```
+
+### Patch
 
