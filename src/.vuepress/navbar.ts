@@ -24,7 +24,7 @@ export default navbar([
     children: [
       { text: "序：Dentate gyrus", link: "", icon: "fa6-solid:brain" },
       { text: "湿：湿实验",      link: "wet.md", icon: "fa6-solid:code" },
-      { text: "暂：Convert",   link: "convert/", icon: "fa6-solid:arrow-right-arrow-left" },
+      { text: "淀：Accumulation",   link: "accumulation/", icon: "fa6-solid:layer-group" },// icon: "fa6-solid:arrow-right-arrow-left" },
       // { text: "Python & R",  link: "python-r/" },
     ],
   },
