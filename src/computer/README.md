@@ -65,6 +65,10 @@ sticky: 99
 
 
 
+## [PLINK](plink.md)
+
+
+
 ### 遗传度
 
 #### [GCTA](./Tanzimat/GCTA.md)

@@ -2,6 +2,7 @@
 title: Accumulation
 icon: dna
 article: false
+cover: Sengoku.jpg
 category:
   - code
 tag:
