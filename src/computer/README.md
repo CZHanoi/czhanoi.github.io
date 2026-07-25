@@ -65,7 +65,7 @@ sticky: 99
 
 
 
-## [PLINK](plink.md)
+### [PLINK](plink.md)
 
 
 
@@ -91,13 +91,15 @@ sticky: 99
 
 👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
-### [freesurfer&fsl](./Tanzimat/fs.md)
-
-👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
 
+### Fine-mapping
 
-## [STAAR](./Tanzimat/STAAR.md)
+[SuSiE](./Tanzimat/ANNOVAR.md)
+
+
+
+### [STAAR](./Tanzimat/STAAR.md)
 
 👉🏻[STAAR github](https://github.com/li-lab-genetics/STAAR)
 
@@ -108,14 +110,21 @@ sticky: 99
 
 
 
-## [Evo](./Tanzimat/Evolution.md)
+### [进化基因组学](./Tanzimat/Evolution.md)
 
 👉🏻[HARE](https://github.com/ossmith/HARE)
 
 
 
-### [→scRNA-seq](./Tanzimat/sc.md)
+### [与scRNA-seq的联合分析](./Tanzimat/sc.md)
 
 #### [gsMap](./Tanzimat/sc.md#gsMap)
 
 👉🏻[文档地址](https://yanglab.westlake.edu.cn/gsmap/document/software)
+
+
+
+### [freesurfer&fsl](./Tanzimat/fs.md)
+
+👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
+

@@ -164,6 +164,18 @@ python -m ipykernel install --user --name janissary --display-name "Janissary"
 sudo apt-get install -y xvfb xauth
 ```
 
+### Jerusalem
+
+```bash
+mamba create -y -n Jerusalem -c conda-forge -c bioconda \
+  python=3.9 numpy=1.23 pandas=1.5 scipy=1.10 matplotlib=3.7 \
+  bitarray pybedtools ipykernel jupyterlab notebook openpyxl \
+  gawk coreutils parallel pigz \
+  r-base r-metafor r-matrix
+  
+python -m ipykernel install --user --name jerusalem --display-name "Py39 Jerusalem"
+```
+
 
 
 ### HARE

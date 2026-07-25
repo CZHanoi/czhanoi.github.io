@@ -30,3 +30,13 @@ which gcta
 which mph
 ```
 
+
+
+```
+wget https://github.com/jiang18/mph/releases/download/v0.55.1/mph-v0.55.1-x86_64-linux.zip
+unzip mph-v0.55.1-x86_64-linux.zip
+chmod +x mph
+install -m 755 mph "$CONDA_PREFIX/bin/mph"
+hash -r
+```
+
