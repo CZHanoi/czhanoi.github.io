@@ -10,12 +10,8 @@ tag:
   - Tanzimat
 ---
 
-<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
-    "Come unto me, all ye that labour and are heavy laden,<br>
-    and I will give you rest."
-    <br>
-    <span style="font-size: 0.9rem; color: #777;">— Matthew 11:28 (King James Version)</span>
-</blockquote>
+<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;"> "Cleanse my heart from all vain, evil, and wandering thoughts;<br>Enlighten my understanding;<br>Kindle my affections." <br> <span style="font-size: 0.9rem; color: #777;">— the Prayer Before the Divine Office (<em>Aperi, Domine, os meum</em>)</span> </blockquote>
+
 
 
 ## Install & Calling
@@ -397,7 +393,7 @@ $1-\alpha_{\ell j}$：第 $\ell$ 个效应不在 SNP $j$ 上的概率；
 
 ### 可信集合 Credible Set
 
-对于每个**单效应**$b_\ell$，构建 95% credible set。可以理解为从大到小依次纳入$\alpha$高的SNP，直到＞0.95。如：
+对于每个**单效应**$b_\ell$，构建 **95% credible set**。可以理解为从大到小依次纳入$\alpha$高的SNP，直到＞0.95。如：
 
 1. 按概率从大到小排序；
 2. 先加入 SNP1，累计概率为 0.55；

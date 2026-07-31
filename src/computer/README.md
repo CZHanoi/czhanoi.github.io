@@ -95,7 +95,11 @@ sticky: 99
 
 ### Fine-mapping
 
-[SuSiE](./Tanzimat/ANNOVAR.md)
+[SuSiE](./Tanzimat/SuSiE.md)
+
+[FINEMAP](./Tanzimat/FINEMAP.md)
+
+[GCTB](./Tanzimat/GCTB.md)
 
 
 
