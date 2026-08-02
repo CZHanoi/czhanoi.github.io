@@ -2,7 +2,7 @@
 title: GCTB
 icon: dna
 article: true
-cover: Goryeo.jpg
+cover: goryeo.jpg
 category:
   - code
   - knowledge
@@ -22,20 +22,9 @@ mamba activate FM
 R
 ```
 
-
-
-```R
-# install.packages("remotes")
-remotes::install_github("stephenslab/susieR")
-# Rscript -e 'IRkernel::installspec(name="ir-fm", displayname="R (FM: SuSiE)")'
-IRkernel::installspec(user = TRUE, name = "r-fm", displayname = "R453 Finemapping")
-```
-
-
+需要下载
 
 ```shell
-python -m ipykernel install --user --name FM --display-name "Py311 Finemapping"
-
 GCTB_HOME="/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/czh_data/Tanzimat/software/gctb/2.5.5"
 GCTB_BIN="${GCTB_HOME}/bin"
 readlink -f "${GCTB_BIN}/gctb"
@@ -65,9 +54,7 @@ unset GCTB_HOME
 EOF
 ```
 
-我的建议是直接建立软链接：
-
-
+另一个替代方案是直接建立软链接：
 
 ```bash
 GCTB_REAL="/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/czh_data/Tanzimat/software/gctb/2.5.5/dist/gctb_2.5.5_Linux/gctb"
