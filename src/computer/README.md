@@ -42,7 +42,7 @@ sticky: 99
 | [Convert](./convert/) | 格式转换，格式 |
 | [SCENIC+](./code/scenicplus.md) | SCENIC+ |
 | [gsMap](./gsmap.md) | gsMap |
-| [STalign](./STalign.md) | STalign 配准 |
+| [STalign](./code/STalign.md) | STalign 配准 |
 | [hdWGCNA](./code/hdWGCNA.md) |  |
 
 

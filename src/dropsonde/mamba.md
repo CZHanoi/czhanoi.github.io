@@ -43,7 +43,7 @@ python -m ipykernel install --user --name goni-metal --display-name "Py311 Goni-
 
 ### STalign
 
-见[STalign](/computer/STalign.md)
+见[STalign](/computer/code/STalign.md)
 
 - ST配准
 
