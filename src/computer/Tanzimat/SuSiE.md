@@ -10,7 +10,18 @@ tag:
   - Tanzimat
 ---
 
-<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;"> "Cleanse my heart from all vain, evil, and wandering thoughts;<br>Enlighten my understanding;<br>Kindle my affections." <br> <span style="font-size: 0.9rem; color: #777;">— the Prayer Before the Divine Office (<em>Aperi, Domine, os meum</em>)</span> </blockquote>
+<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;">
+“To you, the Champion Leader, we your city dedicate<br>
+——a feast of victory and thanksgiving,<br>
+as ones rescued from sufferings, O Theotokos.<br>
+But as you are one with might which is invincible,<br>
+from all dangers that can be, deliver us,<br>
+that we may cry to you: Rejoice, O Bride unwedded.”<br><span style="font-size: 0.9rem; color: #777;">
+— “To You, the Champion Leader” (<em>Τῇ ὑπερμάχῳ / Ti Ypermacho</em>)
+</span>
+</blockquote>
+
+
 
 
 

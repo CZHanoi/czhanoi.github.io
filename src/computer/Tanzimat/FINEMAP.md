@@ -10,7 +10,10 @@ tag:
   - Tanzimat
 ---
 
-<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;"> "Cleanse my heart from all vain, evil, and wandering thoughts;<br>Enlighten my understanding;<br>Kindle my affections." <br> <span style="font-size: 0.9rem; color: #777;">— the Prayer Before the Divine Office (<em>Aperi, Domine, os meum</em>)</span> </blockquote>
+<blockquote style="font-style: italic; font-size: 1.2rem; margin-top: 10px; color: #555;"> “As long as you live, shine;<br>
+let nothing grieve you at all!<br>
+Life lasts only a little while,<br>
+and time demands its due!”<br> <span style="font-size: 0.9rem; color: #777;"> — “The Song of Seikilos” (<em>Ὅσον ζῇς, φαίνου / Seikilos Epitaph</em>)</span> </blockquote>
 
 
 
