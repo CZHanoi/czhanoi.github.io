@@ -73,7 +73,7 @@ export default navbar([
       { text: "Mamba ", link: "mamba.html", icon: "fa6-solid:m" },
       { text: "scp", link: "scp.html", icon: "fa6-solid:truck-fast" },
       { text: "proxy", link: "proxy.html", icon: "fa6-solid:user-shield" },
-
+      { text: "Codex", link: "codex.html", icon: "fa6-solid:robot" },
 
     ],
   },
