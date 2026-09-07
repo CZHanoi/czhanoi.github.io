@@ -45,6 +45,41 @@ sticky: 99
 | [STalign](./code/STalign.md) | STalign 配准 |
 | [hdWGCNA](./code/hdWGCNA.md) |  |
 
+### Novae
+
+```bash
+mamba create --name novae python=3.12 -y
+mamba activate novae
+pip install 'novae[multimodal,conch,llm]'
+python -m ipykernel install --user --name novae --display-name "Py312 novae"
+```
+
+
+
+### Allensdk
+
+```bash
+mamba create -n allensdk -c conda-forge python=3.10 scanpy=1.11.5 pip ipykernel jupyterlab -y
+python -m pip install "git+https://github.com/AllenInstitute/AllenSDK.git@master"
+python -m ipykernel install --user --name allensdk --display-name "Py310 allensdk"
+```
+
+```python
+python - <<'PY'
+import numpy
+import pandas
+import scipy
+import scanpy
+import allensdk
+
+print("numpy   :", numpy.__version__)
+print("pandas  :", pandas.__version__)
+print("scipy   :", scipy.__version__)
+print("scanpy  :", scanpy.__version__)
+print("allensdk:", allensdk.__version__)
+PY
+```
+
 
 
 ##  坦齐马特 Tanzimat
