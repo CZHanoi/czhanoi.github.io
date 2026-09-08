@@ -21,7 +21,7 @@ sticky: 99
 </blockquote>
 自壬辰冬时至今，我们处于黑暗时代。——
 
-
+（批注：耶尼切里：圣经；坦齐马特：歌词；花厅御诏：）
 
 ## 耶尼切里 Janissary
 
@@ -52,6 +52,25 @@ mamba create --name novae python=3.12 -y
 mamba activate novae
 pip install 'novae[multimodal,conch,llm]'
 python -m ipykernel install --user --name novae --display-name "Py312 novae"
+```
+
+#### novae_gpu
+
+```bash
+CONDA_OVERRIDE_GLIBC=2.17 mamba create -n novae_gpu -c conda-forge python=3.12 pip ipykernel "numpy=2.2.*" h5py pyarrow -y
+python -m pip install     torch==2.5.1     torchvision==0.20.1     --index-url https://download.pytorch.org/whl/cu121
+mamba install "numpy==2.2.6"   "pandas==2.2.3"   "h5py==3.14.0"   "scipy"   "scikit-learn==1.7.1"   "igraph"   "anndata==0.11.4"   "scanpy==1.11.5" -c bioconda -c conda-forge
+python -m pip install   --constraint <(printf '%s\n' \                              
+    'numpy==2.2.6' \
+    'pandas==2.2.3' \
+    'h5py==3.14.0' \
+    'scipy==1.15.3' \
+    'scikit-learn==1.7.1' \
+    'igraph==0.11.9' \
+    'anndata==0.11.4' \
+    'scanpy==1.11.5')   "novae[conch,llm]==1.1.1"
+    
+python -m ipykernel install --user --name novae-gpu --display-name "Py312 novae-gpu"
 ```
 
 
@@ -167,3 +186,20 @@ PY
 
 👉🏻[文档地址](https://annovar.openbioinformatics.org/en/latest/user-guide/startup/)
 
+
+
+## 花厅御诏（Gülhane Hatt-ı Şerif）
+
+——WGS数据基础处理
+
+
+
+
+
+### [hail]((./Gulhane/hail.md))
+
+👉🏻[教程](https://hail.is/docs/0.2/index.html)
+
+👉🏻[hail-is/HAIL](https://github.com/hail-is/HAIL)
+
+👉🏻[Nealelab/whole_genome_analysis_pipeline](https://github.com/Nealelab/whole_genome_analysis_pipeline)
