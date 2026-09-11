@@ -101,6 +101,39 @@ PY
 
 
 
+### spAlignDE
+
+这些代码
+
+```bash
+cd /cwStorage/home/chenzhh/Env/spAlignDE-main
+unset PYTHONPATH
+export PYTHONNOUSERSITE=1
+# mamba env create -f environment.yml -y
+# mamba create -n spAlignDE -c conda-forge python=3.10.14 pip=26.0.1 setuptools=80.9.0 wheel=0.46.3 -y
+# python -m pip install torch==2.10.0+cu128 torchvision==0.25.0+cu128 --index-url https://download.pytorch.org/whl/cu128
+mamba create -y -n spAlignDE -c conda-forge --override-channels python=3.10.14 pip setuptools wheel git numpy=1.26.4 scipy=1.10.1 pandas=2.2.3 anndata=0.10.8 "h5py=3.11.*=nompi*" matplotlib-base=3.9.2 shapely=2.0.6 scanpy=1.10.3 scikit-image=0.24.0 scikit-learn=1.5.2 seaborn=0.13.2 harmonypy=0.2.0 python-igraph=0.11.9 leidenalg=0.10.2 louvain=0.8.2 umap-learn=0.5.11 einops=0.8.1 pynrrd=1.0.0 pyyaml=6.0 ipykernel ipywidgets jupyterlab nbconvert nbformat plotly
+
+mamba activate spAlignDE
+python -m pip install --only-binary=:all: pillow==12.1.0 imagecodecs==2025.3.30 opencv-python-headless==4.10.0.84 tifffile==2025.5.10 webdataset==1.0.2
+python -m pip install torch==2.6.0+cu118 torchvision==0.21.0+cu118 --index-url https://download.pytorch.org/whl/cu118
+python -c "import torch,torchvision; print('torch=',torch.__version__); print('torchvision=',torchvision.__version__); print('CUDA runtime=',torch.version.cuda); print('CUDA available=',torch.cuda.is_available()); print('GPU=',torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'NONE'); print('capability=',torch.cuda.get_device_capability(0) if torch.cuda.is_available() else 'NONE')"
+python -c "import torch; x=torch.randn(4096,4096,device='cuda'); y=x@x; torch.cuda.synchronize(); print(y.shape,y.device,torch.cuda.get_device_name(0))"
+
+python -m pip install --no-deps "pybanksy @ git+https://github.com/prabhakarlab/Banksy_py.git@43e2d692db6705c0195039764194473912e4cfc2"
+python -m pip install --only-binary=:all: pyarrow==17.0.0
+mamba install -y -c conda-forge --override-channels "greenlet<3.5" "sqlalchemy<2.1" "jupyter-cache=1.0.1"
+python -m pip install streamlit==1.60.0 myst-nb==1.1.2 pytest==9.1.1 sphinx==7.4.7 sphinx-rtd-theme==2.0.0
+python -m pip install --no-deps --no-build-isolation -e .
+
+# ↑ mamba -f 安装到pip的时候会卡住，目前没有更好的解决方案
+python -m pip install --no-deps python-igraph==0.11.9
+mamba install -y -c conda-forge --override-channels scikit-learn=1.6.1
+python -m ipykernel install --user --name spAlignDE --display-name "Python310 spAlignDE"
+```
+
+
+
 ##  坦齐马特 Tanzimat
 
 ——遗传相关技术整理
@@ -196,7 +229,7 @@ PY
 
 
 
-### [hail]((./Gulhane/hail.md))
+### [hail](./Gulhane/hail.md)
 
 👉🏻[教程](https://hail.is/docs/0.2/index.html)
 
