@@ -116,7 +116,7 @@ ROW   chr1:904165   [entry]       [entry]      [entry]
 | 字段（Entry） |               全称                | 问题                                   | 涉及的操作                                                   |
 | :-----------: | :-------------------------------: | -------------------------------------- | ------------------------------------------------------------ |
 |    **GT**     |             Genotype              | 最终判断你是什么基因型？               |                                                              |
-|    **AD**     |           Allele Depth            | REF、ALT 各有多少 reads 支持？         | **allele balance QC****[x, y]                                |
+|    **AD**     |           Allele Depth            | REF、ALT 各有多少 reads 支持？         | **allele balance QC**[x, y]                                  |
 |    **DP**     |            Read Depth             | 这个样本在这个位置总共有多少测序深度？ | **uninformative reads**<int 32>                              |
 |    **GQ**     |         Genotype Quality          | 对最终 GT 有多大信心？                 | 越大 → 最优 genotype 和竞争 genotype 区分得越明显  → genotype call 越可靠 |
 |    **PL**     | Phred-scaled genotype likelihoods | 0/0、0/1、1/1 分别有多不符合数据？     | **PL 越小越好，0 最好。**[x, y, z]                           |

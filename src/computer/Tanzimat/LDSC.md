@@ -21,7 +21,7 @@ tag:
 
 
 
-## 文件格式
+## 「一」文件格式
 
 ### reference genotype panel
 
@@ -53,9 +53,11 @@ CHR           SNP   A1   A2          MAF  NCHROBS
 1     rs540538026    A    G      0.05419      978
 ```
 
-其中 `MAF` 是 allele `A1` 的频率，`NCHROBS` 是 allele observation 数，`NCHROBS=978`表示观测到 978 个 allele；常染色体二倍体下通常约等于 489 个非缺失样本 × 2。
+其中：
 
-`A1`通常是minor allele，`A2`通常是major allele。
+​	 `MAF` ： allele `A1` 的频率
+​	`NCHROBS` ： allele observation 数，`NCHROBS=978`表示观测到 978 个 allele；常染色体二倍体下通常约等于 489 个非缺失样本 × 2。
+​	`A1`通常是minor allele，`A2`通常是major allele。
 
 **allele frequency 主要对 S-LDSC 有用**，S-LDSC 里很多 annotation 和 M 值处理会**区分 SNP 频率（做MAF分层、common SNP 过滤和 annotation 相关处理）**，如
 
@@ -64,15 +66,14 @@ CHR           SNP   A1   A2          MAF  NCHROBS
 - MAF bins
 - MAF 5%-50% 的 M_5_50
 
-#### PLINK binary genotype
+### PLINK binary genotype
 
 PLINK binary genotype 一般由三件套组成：
+	①`.bed`(binary biallelic genotype table)：  二进制 genotype 矩阵，**biallelic** variant genotype calls 的主要二进制表示
+	②`.bim`(extended MAP file)： Binary MAP，SNP/variant 信息
+	③`.fam`(family/sample information file)： sample/individual 信息
 
-```
-.bed  二进制 genotype 矩阵，biallelic variant genotype calls 的主要二进制表示
-.bim  SNP/variant 信息
-.fam  sample/individual 信息
-```
+
 
 #### `.bim` SNP信息表
 
@@ -86,7 +87,7 @@ PLINK binary genotype 一般由三件套组成：
 
 告诉 LDSC 每个 SNP 在哪里、叫什么、有哪些 allele，并且定义 .bed 二进制 genotype 矩阵中 SNP 的顺序。
 
-**必须和 PLINK `.bim` 文件一一对应。**
+**必须和 PLINK `.bed 文件一一对应。**
 
 #### `.fam`：样本信息表
 
@@ -127,6 +128,8 @@ HG00099             2            1            0
 
 `.bed` 文件按 variant blocks 存储 genotype code，且第一 marker block 对应 `.bim` 文件中的第一个 marker；genotype code 的含义包括 homozygous first allele、missing、heterozygous、homozygous second allele。
 
+
+
 ### S-LDSC annotation reference files
 
 下载地址
@@ -155,23 +158,42 @@ baselineLD.1.log
 
 |       模型        | annotation 数                          | 用途倾向                                                     |
 | :---------------: | -------------------------------------- | ------------------------------------------------------------ |
-|  `baseline_v1.2`  | 经典 baseline model，约 53 annotations | cell-type specific analysis 中常用于检验 tau P-value。       |
+|  `baseline_v1.2`  | 经典 baseline model，约 53 annotations | cell-type specific analysis 中常用于检验 τ P-value。         |
 | `baselineLD_v2.2` | 97 annotations                         | 更强调整 LD、MAF、selection、QTL、sequence age 等因素，常用于 enrichment 估计。 |
 
-官网的readme 推荐：识别 critical tissues/cell-types 的 tau P-value 用 `baseline v1.2`；估计 heritability enrichment，包括 tissue-specific annotation，用 `baselineLD v2.2`。
+官网推荐：
+
+​	识别 critical tissues/cell-types 的 tau P-value 用 `baseline v1.2`；
+
+​	估计 heritability enrichment（如tissue-specific annotation）用 `baselineLD v2.2`。
 
 #### `annot.gz` **annotation matrix**
 
-一行一个 SNP，前 4 列是 SNP 坐标信息，后面 97 列是 baselineLD v2.2 注释
+一行一个 SNP，前 4 列是 SNP 坐标信息，从第 5 列开始后面 97 列是 baselineLD v2.2 注释
 
-前4列：
+```bash
+zcat baselineLD.1.annot.gz | awk '{print $1,$2,$3,$4,$5}' | head
+CHR BP SNP CM base
+1 11008 rs575272151 0 1
+1 11012 rs544419019 0 1
+1 13110 rs540538026 0 1
+1 13116 rs62635286 0 1
+1 13118 rs200579949 0 1
+1 13273 rs531730856 0 1
+1 13550 rs554008981 0 1
+1 14464 rs546169444 0 1
+1 14599 rs531646671 0 1
+```
 
-| 列    | 作用                                                         |
-| ----- | ------------------------------------------------------------ |
-| `CHR` | 染色体编号，1–22。                                           |
-| `BP`  | base-pair 坐标；                                             |
-| `SNP` | rsID；LDSC 和 summary statistics 合并主要靠这个。            |
-| `CM`  | genetic map position，单位 centiMorgan；计算 1 cM LD window 时用。 |
+解释：
+
+| 列     | 作用                                                         |
+| ------ | ------------------------------------------------------------ |
+| `CHR`  | 染色体编号，1–22。                                           |
+| `BP`   | base-pair 坐标；                                             |
+| `SNP`  | rsID；LDSC 和 summary statistics 合并主要靠这个。            |
+| `CM`   | genetic map position，单位 centiMorgan；计算 1 cM LD window 时用。 |
+| `base` | baseline 模型中的 **base annotation**，相当于全 SNP 基础项；通常所有 SNP 都是 `1` |
 
 后面列的分类：
 
@@ -180,7 +202,7 @@ baselineLD.1.log
 |   binary annotation   | `Coding_UCSC`, `Promoter_UCSC`, `DHS_Trynka`      | SNP 是否落在该功能区域内，通常 0/1。     |
 | continuous annotation | `GERP.NS`, `Recomb_Rate_10kb`, `CpG_Content_50kb` | SNP 对应的连续功能、进化或 LD 相关数值。 |
 
-`base` 是全 SNP annotation，一般全为 1，相当于“所有 SNP”的基线项。
+
 
 [详细注释在这里](https://chatgpt.com/c/6a413e32-c79c-83ed-868e-5ef674c12152)
 
@@ -188,27 +210,52 @@ baselineLD.1.log
 
 是 S-LDSC 的核心自变量。
 
+```bash
+zcat baselineLD.1.l2.ldscore.gz | awk '{print $1,$2,$3,$4,$5}' | head
+zcat baselineLD.1.l2.ldscore.gz | cut -f1-5 | head
+CHR     SNP     				BP      baseL2  Coding_UCSCL2
+1       rs3094315       817186  80.826  0.178
+1       rs3131972       817341  80.939  0.183
+1       rs3131969       818802  90.281  0.310
+1       rs1048488       825532  80.678  0.176
+1       rs3115850       825767  80.482  0.143
+1       rs2286139       826352  90.200  0.320
+1       rs12562034      833068  32.887  0.295
+1       rs4040617       843942  85.641  0.209
+1       rs2980300       850609  89.501  0.286
+```
+
 列含义：
 
 |        列        | 作用                                                      |
 | :--------------: | --------------------------------------------------------- |
 |      `CHR`       | 染色体编号，1–22。                                        |
 |      `SNP`       | rsID；LDSC 和 summary statistics 合并主要靠这个。         |
-|       `BP`       | base-pair 坐标。                                          |
+|       `BP`       | base-pair 实际的物理坐标。                                |
 |     `baseL2`     | **普通 LD score，即该 SNP tag 到所有 SNP 的 LD 总量**。   |
 | `<annotation>L2` | SNP 对该 **annotation** 的 annotation-specific LD score。 |
 
-如`Coding_UCSCL2`表示：$l_{j,\text{Coding}} = \sum_k r_{jk}^2 \cdot I(k \in Coding\_UCSC)$，
+如`Coding_UCSCL2`表示：$l_{j,\text{Coding}} = \sum_k r_{jk}^2 \cdot I(k \in Coding\_UCSC)$，即第 $j$ 个 SNP 通过 LD tag 到 coding annotation 中 SNP 的总量。
 
-即第 $j$ 个 SNP 通过 LD tag 到 coding annotation 中 SNP 的总量。
+`.l2.ldscore.gz` 可以因为 `--print-snps` 只输出 regression SNP，例如 HapMap3 SNP。如果计算 LD score 时用了 `--print-snps`，`.l2.ldscore.gz` 可以比 `.annot.gz` 行数更少；但 `.annot.gz` 必须仍然有 reference panel 的所有 SNP，即。
 
-`.l2.ldscore.gz` 可以因为 `--print-snps` 只输出 regression SNP，例如 HapMap3 SNP。官方教程也说明：如果计算 LD score 时用了 `--print-snps`，`.l2.ldscore.gz` 可以比 `.annot.gz` 行数更少；但 `.annot.gz` 必须仍然有 reference panel 的所有 SNP。
+```bash
+python ldsc.py \
+    --l2 \
+    --bfile 1000G.EUR.QC.$CHR \
+    --ld-wind-cm 1 \
+    --print-snps listHM3.txt \
+    --annot yourannot.$CHR.annot.gz \
+    --out yourannot.$CHR
+```
+
+
 
 #### `.l2.M`&`.l2.M_5_50`
 
 `.l2.M`这是 annotation 的 **总 SNP 数 / 总 annotation 值** 文件。
 
-数据只有一行数字，列数等于 `.l2.ldscore.gz` 中 LD score annotation 列数，顺序和 `.l2.ldscore.gz` 的 annotation 顺序一致；
+数据只有**一行数字**，列数等于 `.l2.ldscore.gz` 中 LD score annotation 列数，顺序和 `.l2.ldscore.gz` 的 annotation 顺序一致；
 
 |       注释类型        | 说明                                                         |
 | :-------------------: | ------------------------------------------------------------ |
@@ -224,14 +271,14 @@ S-LDSC 默认常用 **common SNP** 来估计 heritability proportion / enrichmen
 运行：
 
 ```
-ldsc.py --l2 --bfile ... --annot ... --out ...
+python ldsc.py --l2 --bfile ... --annot ... --out ...
 ```
 
 生成 LD score 时的日志。
 
 
 
-### `weights`
+### `weights`目录
 
 `weights`目录下包含：
 
@@ -267,9 +314,62 @@ CHR     SNP     BP      L2
 
 
 
-## S-LDSC算法简略概述
+## 「二」S-LDSC概念、算法概述
+
+### 核心概念
+
+| 概念                    | 含义                                                         |
+| ----------------------- | ------------------------------------------------------------ |
+| **GWAS 的 $\chi^2$**    | GWAS 对每个 SNP 进行关联检验得到的统计量<br>简单理解：检验不同 genotype dosage（通常为 0/1/2 个 effect allele）是否对应 phenotype 的系统性差异。在无 association 且无 confounding 的理想情况下，$E[\chi^2]=1$；$\chi^2$ 越大通常代表 association evidence 越强。 |
+| **tag**                 | 表示一个 SNP 通过 LD **代理 / 捕获 / 间接携带**另一个 SNP 的遗传信息。例如 $SNP_j$ 与 $SNP_k$ 高度 LD，则可以说 $SNP_j$ **tags** $SNP_k$。 |
+| **LD**                  | linkage disequilibrium，连锁不平衡。LDSC 中通常用两个 SNP genotype 的相关系数 $r_{jk}$ 描述，并使用其平方 $r_{jk}^2$ 表示 LD/tagging 强度。理论上的 $r_{jk}^2\in[0,1]$。 |
+| **LD Score**            | $SNP_j$ 与 reference SNP 的 $r^2$ 之和：$l_j=\sum_k r_{jk}^2$。可以理解为 **$SNP_j$ 总共能够 tag 到多少遗传变异**。 |
+| **LDSC 的 $l_j$**       | LDSC 的核心自变量，即 $SNP_j$ 的普通 LD Score。              |
+| **$a_{k,c}$**           | $SNP_k$ 在 annotation $c$ 上的 annotation value。可以是 0/1，也可以是连续值。 |
+| **$\tau_c$**            | 在控制模型中的其他 annotations 后，annotation $c$ 每增加 1 个单位，对 **per-SNP effect-size variance / per-SNP heritability** 的条件贡献。 |
+| **S-LDSC 的 $l_{j,c}$** | annotation-specific LD Score，表示 $SNP_j$ 通过 LD tag 到的、与 annotation (c) 相关的 **LD-weighted annotation 总量**。<br>对于 0/1 annotation，可以简单理解为 $SNP_j$ tag 到 annotation $c$ 中 SNP 的 LD 总量。 |
+
+
+
+### LD Score
+
+对于两个 SNP，使用基因型相关系数的平方 $r_{jk}^2$ 表示 LD 强度，即 $SNP_j$ 对 $SNP_k$ 的 **tagging 强度**。
+
+普通 LD Score 定义为：
+$$
+l_j=\sum_k r_{jk}^2
+$$
+其中：
+
+| **符号**   | **含义**                                                  |
+| ---------- | --------------------------------------------------------- |
+| $j$        | 当前研究的 SNP，即 $SNP_j$                                |
+| $k$        | 被 $SNP_j$ tag 到的 reference SNP                         |
+| $r_{jk}^2$ | $SNP_j$ 与 $SNP_k$ 的 LD 强度                             |
+| $l_j$      | $SNP_j$ 的 LD Score，即对 reference SNP 的总 tagging 程度 |
+
+例如：
+
+$$
+r_{j1}^2=1,\quad
+r_{j2}^2=0.6,\quad
+r_{j3}^2=0.3,\quad
+r_{j4}^2=0.1
+$$
+
+那么：
+
+$$
+l_j=1+0.6+0.3+0.1=2
+$$
+
+可以粗略理解为：**LD Score 衡量一个 SNP 通过 LD 能“看到 / tag 到”多少遗传变异。**
+
+LD Score 高的 SNP能 tag 到更多遗传变异，因此在 polygenic trait 中，也更有机会 tag 到真正具有遗传效应的 SNP。*理论上 LD Score 是 $r^2$ 的求和；LDSC 软件实际计算时还会进行有限参考样本导致的 $r^2$ 偏差校正。*
 
 ### LDSC
+
+思想：**如果一个性状具有大量 causal variants，那么 LD Score 越高的 SNP 越容易 tag 到 causal variation，因此其 GWAS $\chi^2$ 平均也应该越高。**
 
 普通 LDSC 回归近似是：
 $$
@@ -279,49 +379,77 @@ $$
 
 | 符号       | 含义                                                         |
 | ---------- | ------------------------------------------------------------ |
-| $\chi_j^2$ | GWAS 中第 $j$ 个 SNP 的 association chi-square。             |
+| $\chi_j^2$ | GWAS 中第 $j$ 个 SNP 的 association chi-square。「一个统计量」 |
 | $N$        | GWAS 样本量。                                                |
 | $h_g^2$    | SNP heritability。                                           |
 | $M$        | 参考 SNP 总数。                                              |
 | $l_j$      | 第 $j$ 个 SNP 的普通 LD score。                              |
 | $a$        | 截距，吸收 population stratification、cryptic relatedness 等 confounding。 |
 
+因此 LDSC 本质上是在大量 SNP 上观察：
 
+$$
+l_j\uparrow
+\quad\Longrightarrow\quad
+E[\chi_j^2]\uparrow
+$$
+
+回归斜率为：
+$$
+\frac{Nh_g^2}{M}
+$$
+因此可以利用 **LD Score 与 GWAS $\chi^2$ 的关系估计 SNP heritability**。
+
+
+
+*LDSC 实际使用加权回归，而不是普通 OLS。*
 
 ### S-LDSC
 
-S-LDSC 是 Stratified LDSC，即多个 annotation-specific LD score 解释分层遗传力。它不是只有一个 LD score，而是为每个 annotation 计算一个 annotation-specific LD score：
+S-LDSC 是 **Stratified LD Score Regression**。
+
+普通 LDSC 只有一个总体 LD Score：
 $$
-E[χ_j²]
-=
-1
-+
-N Σ_c τ_c ℓ(j,c)
-+
-N a
+l_j=\sum_k r_{jk}^2
 $$
-S-LDSC 的模型是：
+S-LDSC 则进一步为每个 annotation 计算一个 **annotation-specific LD Score**：
 $$
-E[\chi_j^2] \approx 1 + N \sum_c \tau_c l_{j,c} + a
-$$
- $\tau_c$ 是 annotation $c$ 的 per-SNP heritability contribution，条件于其他 annotation，而$l_{j,c}$为：
-$$
-l_{j,c}=k∑r_{jk}^2a_{k,c}
+\sum_k r_{jk}^2a_{k,c}
 $$
 其中：
 
-| 符号      | 含义                                                         |
+| **符号**  | **含义**                                                     |
 | --------- | ------------------------------------------------------------ |
-| $c$       | annotation 类别，例如 coding、promoter、enhancer、MAF bin、GERP 等。 |
-| $a_{k,c}$ | SNP $k$ 在 annotation $c$ 上的值；可以是 0/1，也可以是连续值「取决于注释类型」。 |
-| $l_{j,c}$ | SNP $j$ tag 到 annotation $c$ 中 SNP 的 LD 总量。            |
+| $c$       | annotation，例如 coding、promoter、enhancer、MAF bin、GERP 等 |
+| $a_{k,c}$ | $SNP_k$ 在 annotation $c$ 上的值，可以是 0/1，也可以是连续值 |
+| $l_{j,c}$ | $SNP_j$ 对 annotation $c$ 的 annotation-specific LD Score    |
+| $\tau_c$  | 控制其他 annotation 后，annotation $c$ 每增加 1 个单位，对 per-SNP heritability / effect-size variance 的条件贡献 |
 
-表示为每个 annotation 计算一个 annotation-specific LD score。
+S-LDSC 回归模型为：
+$$
+E[\chi_j^2]
+\approx
+1+
+N\sum_c\tau_c l_{j,c}
++
+a
+$$
+对于二元 annotation，例如 promoter：$$\begin{cases}
+1, SNP_k\text{ 位于 promoter};\
+0, SNP_k\text{ 不位于 promoter}
+\end{cases}\}$$
 
-其中
+所以：$$\sum_k
+r_{jk}^2
+a_{k,\mathrm{Promoter}}$$可以理解为：**$SNP_j$ 通过 LD tag 到 promoter SNP 的 LD 总量，**即**$SNP_j$ 与 promoter SNP 的 $r^2$ 总量高，则 promoter-specific LD Score 高。**
 
-如果 SNP j 周围有很多 promoter SNP，
-那么 promoter-specific LD score 就高。
+如果在控制 coding、enhancer、MAF、LD-related annotations 等其他变量后：
+$$
+l_{j,\mathrm{Promoter}}\uparrow
+\quad\Longrightarrow\quad
+E[\chi_j^2]\uparrow
+$$
+则会估计出相应的 promoter $\tau_c$；如果 $\tau_c>0$ 且具有统计学证据，则说明 **promoter annotation 与更高的 per-SNP heritability 条件性相关**。
 
-如果高 promoter LD score 的 SNP χ² 系统性更高，
-S-LDSC 就会认为 promoter annotation 贡献了更多 h²。
+S-LDSC 的标准定义正是以 $l_{j,c}=\sum_k r_{jk}^2a_{k,c}$ 为自变量，并将 $\tau_c$ 定义为控制其他 annotations 后对 per-SNP heritability 的贡献。
+

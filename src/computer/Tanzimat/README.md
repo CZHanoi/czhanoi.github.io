@@ -19,7 +19,7 @@ sticky: 99
         Sanskrit: इहैव निधनं यामो महाप्रस्थानमेव वा।
     </span>
 </blockquote>
-自壬辰冬时至今，我们处于黑暗时代。——
+自壬辰冬时至今，我们一直处于黑暗时代。——
 
 
 
@@ -236,3 +236,13 @@ python -m ipykernel install --user --name spAlignDE --display-name "Python310 sp
 👉🏻[hail-is/HAIL](https://github.com/hail-is/HAIL)
 
 👉🏻[Nealelab/whole_genome_analysis_pipeline](https://github.com/Nealelab/whole_genome_analysis_pipeline)
+
+
+
+## 改革敕令（Hatt-ı Hümayun）
+
+——数据下载与整理
+
+
+
+[SingleBrain](./Humayun/SingleBrain.md)
