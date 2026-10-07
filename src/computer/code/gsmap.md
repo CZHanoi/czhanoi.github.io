@@ -28,8 +28,8 @@ pip install -e .
 
 
 ```bash
-mamba create -n gsMap python>=3.10
-mamba install -c conda-forge "numpy<2" pandas scipy scikit-learn matplotlib seaborn tqdm pyyaml python-kaleido zarr bitarray jinja2 plotly scanpy scikit-misc pyarrow
+mamba create -n gsMap python=3.11.17
+mamba install -c conda-forge "numpy<2" pandas scipy scikit-learn matplotlib seaborn tqdm pyyaml python-kaleido zarr bitarray jinja2 plotly scanpy "scikit-misc==0.4.0" pyarrow
 mamba install -c conda-forge -c bioconda "bitarray<3" pyranges sorted_nearest
 git clone https://github.com/JianYang-Lab/gsMap
 cd gsMap
