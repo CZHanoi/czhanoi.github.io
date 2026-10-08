@@ -134,7 +134,7 @@ python -m ipykernel install --user --name spAlignDE --display-name "Python310 sp
 
 
 
-##  坦齐马特 Tanzimat
+##  [坦齐马特 Tanzimat](./Tanzimat)
 
 ——遗传相关技术整理
 
@@ -238,10 +238,12 @@ python -m ipykernel install --user --name spAlignDE --display-name "Python310 sp
 👉🏻[Nealelab/whole_genome_analysis_pipeline](https://github.com/Nealelab/whole_genome_analysis_pipeline)
 
 
-## 改革敕令（Hatt-ı Hümayun）
+## [改革敕令（Hatt-ı Hümayun）](./Humayun)
 
 ——数据下载与整理
 
 
 
 [SingleBrain](./Humayun/SingleBrain.md)
+
+[gsmap数据](./Humayun/HESTA.md)

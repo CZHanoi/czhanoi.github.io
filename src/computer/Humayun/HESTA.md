@@ -22,8 +22,9 @@ tag:
 
 ## HESTA
 
-```
+```bash
 /cwStorage/nodecw_group/czh_data/hsbrain/HESTA
+/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/public/czh_data/Tanzimat/ref/gsmap/HESTA
 ```
 
 
@@ -63,9 +64,38 @@ tag:
 
 ### 长相：
 
+```python
+# /cwStorage/home/chenzhh/Tanzimat/Mujigae/HESTA-check.ipynb
+import scanpy as sc
+import pandas as pd
+adata = sc.read_h5ad("/cwStorage/nodecw_group/czh_data/hsbrain/HESTA/CS23_E2S5_HESTA.h5ad")
+adata_bin50 = sc.read_h5ad("/cwStorage/nodecw_group/czh_data/hsbrain/HESTA/CS23_E2S5.bin50.substructure.h5ad")
+print("CS23_E2S5_HESTA.h5ad")
+print(adata)
+print("CS23_E2S5.bin50.substructure.h5ad")
+print(adata_bin50)
 ```
 
 ```
+CS23_E2S5_HESTA.h5ad
+AnnData object with n_obs × n_vars = 671089 × 50470
+    obs: 'orig.ident', 'x', 'y', 'n_genes_by_counts', 'log1p_n_genes_by_counts', 'total_counts', 'log1p_total_counts', 'pct_counts_in_top_50_genes', 'pct_counts_in_top_100_genes', 'pct_counts_in_top_200_genes', 'pct_counts_in_top_500_genes', 'total_counts_mt', 'log1p_total_counts_mt', 'pct_counts_mt', 'cellid', 'celltype', 'stage'
+    var: 'mt', 'n_cells_by_counts', 'mean_counts', 'log1p_mean_counts', 'pct_dropout_by_counts', 'total_counts', 'log1p_total_counts', 'n_cells'
+    uns: 'celltype_colors', 'log1p', 'sn'
+    obsm: 'spatial'
+    layers: 'counts'
+CS23_E2S5.bin50.substructure.h5ad
+AnnData object with n_obs × n_vars = 563390 × 49338
+    obs: 'n_genes_by_counts', 'log1p_n_genes_by_counts', 'total_counts', 'log1p_total_counts', 'pct_counts_in_top_50_genes', 'pct_counts_in_top_100_genes', 'pct_counts_in_top_200_genes', 'pct_counts_in_top_500_genes', 'total_counts_mt', 'log1p_total_counts_mt', 'pct_counts_mt', 'stage', 'substructure', 'organ', 'clusters', 'sample', 'cellid'
+    var: 'mt', 'n_cells_by_counts', 'mean_counts', 'log1p_mean_counts', 'pct_dropout_by_counts', 'total_counts', 'log1p_total_counts', 'n_cells', 'mean', 'std', 'highly_variable', 'means', 'dispersions', 'dispersions_norm'
+    uns: '__type', 'dendrogram_clusters', 'hvg', 'leiden', 'leiden_2.2_colors', 'leiden_2.4_colors', 'leiden_2.6_colors', 'leiden_2.8_colors', 'leiden_3.0_colors', 'log1p', 'neighbors', 'pca', 'rank_genes_groups', 'spatial_neighbors', 'substructure_colors', 'umap'
+    obsm: 'X_pca', 'X_umap', 'old_spatial', 'spatial'
+    varm: 'PCs'
+    layers: 'counts', 'log'
+    obsp: 'connectivities', 'distances', 'spatial_connectivities', 'spatial_distances'
+```
+
+
 
 
 
