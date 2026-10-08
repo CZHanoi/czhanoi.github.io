@@ -36,7 +36,16 @@ cd gsMap
 pip install -e .
 ```
 
+
+
+```bash
+python -m ipykernel install --user --name gsmap --display-name "Py311 gsmap"
+```
+
+
+
 ## Tips
+
 ①不要把`bcftools`和gsMap装在同一环境，会有底层库冲突；
 
 
