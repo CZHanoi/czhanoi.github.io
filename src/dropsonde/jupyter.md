@@ -204,7 +204,7 @@ http://127.0.0.1:2604/dsw-33823/lab?
 
 
 
-## 更新后版本
+## 更新后版本（类脑服务器现行版）
 
 [三二七-汉边改革](/medicine/#三二七-汉边改革)
 
@@ -241,7 +241,9 @@ http://127.0.0.1:2604/dsw-33823/lab?
 ~/bin/start_jlab.sh 1330
 ```
 
-`~/bin/start_jlab.sh`
+
+
+启动jupyter的文件：`~/bin/start_jlab.sh`
 
 ```bash
 #!/usr/bin/env bash
@@ -388,7 +390,7 @@ nohup jupyter lab --config="$HOME/.jupyter/jupyter_server_config.py" \
 
 
 
-## 旧党
+## 之前的运行方法-备案（不建议）
 
 ```bash
 mamba activate base
