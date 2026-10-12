@@ -71,6 +71,35 @@ dependencies:
 
 
 
+```bash
+cat ~/.local/share/jupyter/kernels/hail/kernel.json
+# vim ~/.local/share/jupyter/kernels/hail/kernel.json
+{
+ "argv": [
+  "/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/miniforge3/envs/hail/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Py310 hail",
+ "language": "python",
+ "env": {
+    "JAVA_HOME": "/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/miniforge3/envs/hail",
+    "PATH": "/cpfs01/projects-HDD/cfff-afe2df89e32e_HDD/zy_22111220045/miniforge3/envs/hail/bin:${PATH}"
+  },
+ "metadata": {
+  "debugger": true,
+  "supported_encryption": "curve"
+ },
+ "kernel_protocol_version": "5.5"
+}
+```
+
+
+
+
+
 ### 需要宏观剔除的reads
 
 |            类别            |                            解释                             | 举例                                                         | 主要问题                      |

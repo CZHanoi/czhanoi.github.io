@@ -71,7 +71,7 @@ export default navbar([
       { text: "Jupyter", link: "jupyter.html", icon: "fa6-solid:laptop-code" },
       { text: "Otaku-R", link: "otaku-r.html", icon: "fa6-solid:gamepad" },
       { text: "Mamba ", link: "mamba.html", icon: "fa6-solid:m" },
-      { text: "scp", link: "scp.html", icon: "fa6-solid:truck-fast" },
+      { text: "transfer&download", link: "scp.html", icon: "fa6-solid:truck-fast" },
       { text: "proxy", link: "proxy.html", icon: "fa6-solid:user-shield" },
       { text: "Codex", link: "codex.html", icon: "fa6-solid:robot" },
 
